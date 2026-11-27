@@ -77,3 +77,27 @@ open SolvedMath.PatternSeparator
 /-- info: 'LeeSah.figure_normalization' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms LeeSah.figure_normalization
+
+/-- info: 'StripCoordinates.printed_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms StripCoordinates.printed_lower_bound
+
+/-- info: 'StripCoordinates.printed_no_eventual_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms StripCoordinates.printed_no_eventual_recurrence
+
+/-- info: 'PeriodicTableaux.sourceEquivPaths' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms PeriodicTableaux.sourceEquivPaths
+
+/-- info: 'PeriodicTableaux.wordCount_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms PeriodicTableaux.wordCount_eq_sum
+
+/-- info: 'PeriodicTableaux.fixed_excess_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms PeriodicTableaux.fixed_excess_recurrence
+
+/-- info: 'PeriodicTableaux.dal_zovo_zigzag_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms PeriodicTableaux.dal_zovo_zigzag_recurrence
