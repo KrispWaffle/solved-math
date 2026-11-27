@@ -2,6 +2,8 @@
 
 Can the first five packing counts determine the entire sequence for every consecutive permutation pattern? Blitvić, Kammoun, and Steingrímsson asked this after comparing enumerations for patterns of length at most twelve. We construct pairs of the same length and overlap that first differ as late as desired. [Part I, §7, item 8](https://arxiv.org/html/2610.29846v1#S7)
 
+Cinna Davis had already posted a family disproving an absolute cutoff on November 26, 2026. This manuscript gives a later construction and an exact expression for its first discrepancy. [Earlier proof and verification scope](AUDIT.md)
+
 ## The patterns
 
 For a pattern $p$ of length $K$ and overlap $m$, let $N_{p,m}(j)$ count the permutations of length $K+(j-1)(K-m)$ whose $j$ consecutive windows starting at $1+t(K-m)$, $0\le t<j$, have relative order $p$. Other occurrences are allowed. Equivalently, regard the positions as elements of a poset and impose the rank order of $p$ in each prescribed window. Giving ranks $1,2,\ldots$ to the positions in a linear extension gives exactly one packing and conversely. [Definitions 2.5–2.6, Remark 2.7, and Theorem 5.3](https://arxiv.org/html/2610.29846v1)

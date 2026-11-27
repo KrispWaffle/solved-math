@@ -1,21 +1,21 @@
-# Permutation conjectures
+# Solved Math
 
-Two proofs about permutation patterns, with exact checks written in standard-library Python.
+Mathematical conjectures with written proofs and reproducible checks. New results include a Lean theorem stated in the terms of the original problem.
 
-| Result | What the proof establishes |
-|---|---|
-| [Big descents and Schur positivity](big-descents/proof.md) | Proves Elizalde–Rivera–Zhuang's Conjecture 4.9. Each Schur coefficient counts pairs of tableaux, even when the longest increasing subsequence length is fixed exactly. |
-| [No universal packing cutoff](packing-cutoff/proof.md) | Answers the universal-cutoff question of Blitvić, Kammoun, and Steingrímsson in the negative. For every $k\ge2$, two patterns with the same length and overlap agree through $k$ prescribed occurrences and differ at $k+1$. |
+| Result | Conclusion | Verification |
+|---|---|---|
+| [Separators in permutation-pattern posets](results/pattern-poset-separator/README.md) | The final position of the first window separates the poset for the family proposed by Blitvić, Kammoun, and Steingrímsson. A shared-gap condition extends the theorem to arbitrary overlap sizes. | Lean 4, kernel replay, direct enumeration |
+| [Schur positivity of big descents](results/big-descents/README.md) | A tableau formula at each exact longest increasing subsequence length. Cinna Davis recorded the positivity theorem on November 26, 2026. | Written derivation and exact Python checks |
+| [No universal packing cutoff](results/packing-cutoff/README.md) | A family of pairs whose packing counts first differ arbitrarily late. Cinna Davis recorded the negative answer on November 26, 2026. | Written derivation and exact Python checks |
 
-The [research log](research-log.md) records the derivations, prior-work searches, and verification scope. Both manuscripts are research drafts.
+The [contents](CONTENTS.md) link to each proof, its scope, and the code. The [history](HISTORY.md) records the earlier proofs and the correction to the first two entries.
 
-## Run the checks
+## Verify locally
 
-From the repository root, run
+From the repository root, with Python 3 and the Lean toolchain manager Elan on your path, run
 
-~~~sh
-python3 big-descents/verify.py
-python3 packing-cutoff/verify.py
-~~~
+```sh
+./scripts/verify.sh
+```
 
-The first program enumerates permutations and compares their big-descent sets with the tableau formula. The second counts rank assignments satisfying the original window constraints. Both use exact integer arithmetic.
+The script builds the pinned Lean project, replays the kernel, checks the catalog links, and runs each exact verifier. [Lean declarations and axioms](docs/lean-status.md)

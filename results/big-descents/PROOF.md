@@ -2,6 +2,8 @@
 
 Elizalde, Rivera Jr., and Zhuang conjectured that the big-descent quasisymmetric function of permutations avoiding the increasing pattern of length $m$ is symmetric and Schur positive for every $n$ and $m$. We prove the stronger assertion with the length of the longest increasing subsequence fixed exactly. The Schur coefficients count pairs of tableaux. [Conjecture 4.9, published paper](https://doi.org/10.1007/s00026-026-00805-1) · [Author manuscript, §4.3](https://arxiv.org/html/2408.15111v2#S4.SS3)
 
+Cinna Davis had already posted the positivity theorem, including the fixed-length refinement, on November 26, 2026. This manuscript records a later tableau derivation. [Earlier proof and verification scope](AUDIT.md)
+
 ## Statement
 
 For a permutation $\pi$ of $[n]$, let $L(\pi)$ be the length of its longest increasing subsequence, with $L(\varnothing)=0$. Write

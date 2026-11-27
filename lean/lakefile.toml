@@ -1,0 +1,12 @@
+name = "solved-math"
+version = "0.1.0"
+defaultTargets = ["SolvedMath", "ProofAudit"]
+
+[leanOptions]
+warningAsError = true
+
+[[lean_lib]]
+name = "SolvedMath"
+
+[[lean_lib]]
+name = "ProofAudit"

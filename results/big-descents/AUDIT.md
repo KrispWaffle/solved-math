@@ -1,0 +1,5 @@
+# Big-descent proof audit
+
+Elizalde, Rivera Jr., and Zhuang’s Conjecture 4.9 asks for symmetry and Schur positivity under avoidance of an increasing pattern. Fixing the longest increasing subsequence length exactly refines that assertion. The November 26 proof by Cinna Davis covers both statements. The present derivation uses Grothendieck functions and a cancellation on marked tableaux. [Author manuscript, §4.3](https://arxiv.org/html/2408.15111v2#S4.SS3) · [Earlier proof](https://github.com/1337isnot1337/solved-conjectures/blob/16ac09a1dd4f9fa30b1e115c163baf4bc04083a7/results/erz-big-descent-schur/PROOF.md)
+
+The Python checker computes every fundamental coefficient in two ways through length nine, including the empty permutation. One side enumerates permutations directly and one evaluates the tableau formula. The general proof is a manuscript. Lean coverage currently begins with the separator theorem. [Checker](verify.py) · [Derivation and corrected search record](../../docs/research-log.md)
