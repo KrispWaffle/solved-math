@@ -4,7 +4,7 @@
 
 | Result | Written proof | Formal proof | Scope and prior work | Direct check |
 |---|---|---|---|---|
-| [Lee–Sah cluster-poset heights](results/lee-sah-cluster-height/README.md) | [Uniform limit shape](results/lee-sah-cluster-height/PROOF.md) | [Spine law](lean/SolvedMath/ClusterSpineLaw.lean) · [Rank transfer](lean/SolvedMath/ClusterExtensionLaw.lean) · [Beta reference](lean/SolvedMath/ClusterReference.lean) | [Scope and review](results/lee-sah-cluster-height/AUDIT.md) | [Exact rank distributions](results/lee-sah-cluster-height/verify.py) |
+| [Lee–Sah cluster-poset heights](results/lee-sah-cluster-height/README.md) | [Uniform limit shape](results/lee-sah-cluster-height/PROOF.md) | [Full conjecture and exponential bound](lean/SolvedMath/ClusterLimit.lean) | [Scope and review](results/lee-sah-cluster-height/AUDIT.md) | [Exact rank distributions](results/lee-sah-cluster-height/verify.py) |
 | [Pattern-poset separators](results/pattern-poset-separator/README.md) | [General classification](results/pattern-poset-separator/CLASSIFICATION.md) · [Specific separator](results/pattern-poset-separator/PROOF.md) | [Classification](lean/SolvedMath/SeparatorClassification.lean) · [Family](lean/SolvedMath/PatternSeparator.lean) | [Classification audit](results/pattern-poset-separator/CLASSIFICATION-AUDIT.md) · [Family audit](results/pattern-poset-separator/AUDIT.md) | [Rank test](results/pattern-poset-separator/classification.py) · [Window order](results/pattern-poset-separator/verify.py) |
 
 ## Archive

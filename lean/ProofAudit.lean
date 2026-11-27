@@ -65,3 +65,15 @@ open SolvedMath.PatternSeparator
 /-- info: 'LeeSah.sampleSpine_preserves' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms LeeSah.sampleSpine_preserves
+
+/-- info: 'LeeSah.extension_rank_tail_all' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.extension_rank_tail_all
+
+/-- info: 'LeeSah.lee_sah_conjecture61' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.lee_sah_conjecture61
+
+/-- info: 'LeeSah.figure_normalization' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.figure_normalization

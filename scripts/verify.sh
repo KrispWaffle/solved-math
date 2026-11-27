@@ -14,7 +14,8 @@ cd "$(dirname "$0")/.."
       Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic Mathlib.Logic.Equiv.Fin.Basic \
       Mathlib.MeasureTheory.Integral.Prod Mathlib.MeasureTheory.Integral.Pi \
       Mathlib.MeasureTheory.Integral.DominatedConvergence Mathlib.Order.Preorder.Finite \
-      Mathlib.Analysis.SpecialFunctions.Pow.Continuity Mathlib.Topology.Order.IntermediateValue \
+      Mathlib.Analysis.SpecialFunctions.Pow.Continuity Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics \
+      Mathlib.Topology.Order.IntermediateValue Mathlib.Order.Fin.Tuple \
       Mathlib.Probability.Moments.SubGaussian Mathlib.Data.Fin.Tuple.Sort \
       Mathlib.MeasureTheory.Constructions.UnitInterval Mathlib.Tactic.FieldSimp \
       Mathlib.Tactic.Linarith Mathlib.Tactic.Positivity Mathlib.Tactic.Ring
