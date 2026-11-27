@@ -69,6 +69,13 @@ def verify():
                         counts[overlap] = counts.get(overlap, 0) + 1
                         if overlap == 2 and suffix[-1] - 1 < length - 2:
                             paper_cases += 1
+    # Item 5 supplies these counts for patterns outside the sufficient condition.
+    for word, overlap, windows, expected in (
+        ("135268479", 3, 4, 3),
+        ("479258136", 6, 7, 5),
+    ):
+        above = order(tuple(map(int, word)), overlap, windows)
+        assert sum(is_separator(above, z) for z in range(len(above))) == expected
     # A chain fails the two nonchain conditions even if every vertex is comparable.
     assert not is_separator(order((1, 2, 3, 4), 2, 3), 3)
     # With only two windows and the maximum at the last position, the upper side is a chain.
