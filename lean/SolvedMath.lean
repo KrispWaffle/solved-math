@@ -1,2 +1,5 @@
 import SolvedMath.PatternSeparator
 import SolvedMath.SeparatorClassification
+import SolvedMath.ClusterFigure
+import SolvedMath.TableauRecurrence
+import SolvedMath.StripCoordinates

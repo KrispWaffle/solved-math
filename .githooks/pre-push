@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+worktree=$(git rev-parse --show-toplevel)
 snapshots=$(mktemp -d)
 trap 'rm -rf -- "$snapshots"' EXIT
 
@@ -13,6 +14,14 @@ while read -r local_ref oid remote_ref _; do
   [[ -d "$snapshot" ]] && continue
   mkdir "$snapshot"
   git archive "$commit" | tar -x -C "$snapshot"
+  # Reuse only external Lake packages when both the lockfile and toolchain match.
+  # Project sources and their compiled modules always come from the archived tip.
+  if [[ -d "$worktree/lean/.lake/packages" ]] &&
+      cmp -s "$worktree/lean/lake-manifest.json" "$snapshot/lean/lake-manifest.json" &&
+      cmp -s "$worktree/lean/lean-toolchain" "$snapshot/lean/lean-toolchain"; then
+    mkdir -p "$snapshot/lean/.lake"
+    ln -s "$worktree/lean/.lake/packages" "$snapshot/lean/.lake/packages"
+  fi
   printf 'Verifying %s at %.12s locally\n' "$remote_ref" "$commit" >&2
   (cd "$snapshot" && ./scripts/verify.sh) </dev/null
 done

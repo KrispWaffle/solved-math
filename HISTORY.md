@@ -2,6 +2,10 @@
 
 ## November 27, 2026
 
+- Answered Dal Zovo’s recurrence question for generalized shifted tableaux. The formal proof counts the source words, establishes one recurrence per width and excess, and distinguishes the literal-coordinate obstruction from the intended convention. Independently reviewed written proofs give the growth by excess regime. [Problem](results/periodic-set-valued-tableaux/README.md) · [Audit](results/periodic-set-valued-tableaux/AUDIT.md)
+
+- Added a reviewed written proof of Lee and Sah’s random-height conjecture for every cluster poset in Definition 1.3, with an exponential bound for simultaneous deviations. The completed Lean proof derives the conjecture and an all-size exponential bound from finite counts of the original extensions. [Proof](results/lee-sah-cluster-height/PROOF.md) · [Lean scope and review](results/lee-sah-cluster-height/AUDIT.md)
+
 - Added the general algorithmic characterization to the existing separator problem. It classifies every occurrence count using boundary ranks and proves uniform stabilization at $4K+1$. [Proof](results/pattern-poset-separator/CLASSIFICATION.md) · [Review and local checks](results/pattern-poset-separator/CLASSIFICATION-AUDIT.md)
 
 - Moved the [big-descent](archive/big-descents/README.md) and [packing-cutoff](archive/packing-cutoff/README.md) manuscripts and checkers into the archive of later derivations. The separator theorem remains in the original-results catalog.

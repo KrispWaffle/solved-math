@@ -35,3 +35,7 @@ Giving the two positions equal height solves that problem if every window inequa
 ## 27 November 2026 — General separator classification
 
 Each rank in one window generates a final rank interval in the next. Compatibility makes the interval agree on every shared physical position, even across long overlaps. Iterating the two boundary maps gives an exact reachability test. Their orbits stabilize on a finite chain. The extra step for separators was to preserve three positions at once. Capping the two gaps on either side of a chosen center preserves both witnesses to a nonchain. This gives a cutoff depending only on the pattern length, and an executable test for the full question. [Proof](../results/pattern-poset-separator/CLASSIFICATION.md) · [Audit](../results/pattern-poset-separator/CLASSIFICATION-AUDIT.md)
+
+## 27 November 2026 — Lee–Sah height conjecture
+
+While working on the overlap-one packing moment problem, I compared each window’s weight with beta factors at all its intermediate spine points. Lee and Sah’s Theorem 1.4 already gives the resulting exponential growth rate for the counts. The same comparison controls rare events and resolves the separate height conjecture at the end of their paper. The clean estimate comes from leaving the first point uniform, sorting the other points under the beta law, and bounding the lost mass by a polynomial in the chain length. [Proof](../results/lee-sah-cluster-height/PROOF.md) · [Prior work and independent review](../results/lee-sah-cluster-height/AUDIT.md)
