@@ -26,12 +26,14 @@ def mark {n : ℕ} (c : ℕ) (i : Fin (n+1)) : Fin (n*c+1) :=
 
 abbrev Ranking (p q c n : ℕ) := Element p q c n ≃ Fin (Fintype.card (Element p q c n))
 
-def IsExtension {p q c n : ℕ} (e : Ranking p q c n) : Prop :=
+def Respects {p q c n : ℕ} {β : Type*} [Preorder β] (e : Element p q c n → β) : Prop :=
   StrictMono (fun s => e (Sum.inl s)) ∧
   (∀ w : Fin n, StrictMono (fun j : Fin p => e (Sum.inr (Sum.inl (w,j))))) ∧
   (∀ w : Fin n, StrictMono (fun j : Fin q => e (Sum.inr (Sum.inr (w,j))))) ∧
   (∀ (w : Fin n) (j : Fin p), e (Sum.inr (Sum.inl (w,j))) < e (Sum.inl (mark c w.castSucc))) ∧
   (∀ (w : Fin n) (j : Fin q), e (Sum.inl (mark c w.succ)) < e (Sum.inr (Sum.inr (w,j))))
+
+def IsExtension {p q c n : ℕ} (e : Ranking p q c n) : Prop := Respects (p := p) (q := q) (c := c) (n := n) e
 
 def betaWeight (p q c : ℕ) (x : ℝ) : ℝ :=
   x ^ ((p:ℝ)/c) * (1-x) ^ ((q:ℝ)/c)
@@ -42,11 +44,13 @@ def betaCdf (p q c : ℕ) (x : ℝ) : ℝ :=
 def betaQuantile (p q c : ℕ) (u : ℝ) : ℝ :=
   sInf {x : ℝ | x ∈ Icc 0 1 ∧ u ≤ betaCdf p q c x}
 
-def badFraction (p q c n : ℕ) (ε : ℝ) : ℝ :=
-  let bad (e : Ranking p q c n) := ∃ i : Fin (n+1),
+def rankBad {p q c n : ℕ} (ε : ℝ) (e : Ranking p q c n) : Prop :=
+  ∃ i : Fin (n+1),
     ε < |(((e (Sum.inl (mark c i))).val + 1 : ℝ) / Fintype.card (Element p q c n)) -
        betaQuantile p q c (((i.val:ℝ)+1)/((n:ℝ)+2))|
-  (Nat.card {e : Ranking p q c n // IsExtension e ∧ bad e} : ℝ) /
+
+def badFraction (p q c n : ℕ) (ε : ℝ) : ℝ :=
+  (Nat.card {e : Ranking p q c n // IsExtension e ∧ rankBad ε e} : ℝ) /
     Nat.card {e : Ranking p q c n // IsExtension e}
 
 /-- Conjecture 6.1 with one-based normalized ranks, simultaneous in every marked point. -/

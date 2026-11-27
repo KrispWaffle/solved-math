@@ -8,9 +8,13 @@ fi
 cd "$(dirname "$0")/.."
 (
   cd lean
-  if [[ ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/IntervalIntegral/Basic.olean ]]; then
+  if [[ ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/Pi.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Probability/Moments/SubGaussian.olean ]]; then
     lake exe cache get Mathlib.Analysis.SpecialFunctions.Pow.Real Mathlib.Data.Fintype.Card \
       Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic Mathlib.Logic.Equiv.Fin.Basic \
+      Mathlib.MeasureTheory.Integral.Prod Mathlib.MeasureTheory.Integral.Pi \
+      Mathlib.MeasureTheory.Integral.DominatedConvergence Mathlib.Order.Preorder.Finite \
+      Mathlib.Analysis.SpecialFunctions.Pow.Continuity Mathlib.Topology.Order.IntermediateValue \
       Mathlib.Probability.Moments.SubGaussian Mathlib.Data.Fin.Tuple.Sort \
       Mathlib.MeasureTheory.Constructions.UnitInterval Mathlib.Tactic.FieldSimp \
       Mathlib.Tactic.Linarith Mathlib.Tactic.Positivity Mathlib.Tactic.Ring

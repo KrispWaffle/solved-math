@@ -41,3 +41,27 @@ open SolvedMath.PatternSeparator
 /-- info: 'LeeSah.uniform_cube_tail' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms LeeSah.uniform_cube_tail
+
+/-- info: 'LeeSah.rank_bound_of_labels' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.rank_bound_of_labels
+
+/-- info: 'LeeSah.spine_event_probability' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.spine_event_probability
+
+/-- info: 'LeeSah.labelBadFraction_eq_spine' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.labelBadFraction_eq_spine
+
+/-- info: 'LeeSah.betaLaw_density' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.betaLaw_density
+
+/-- info: 'LeeSah.refLaw_real' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.refLaw_real
+
+/-- info: 'LeeSah.sampleSpine_preserves' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms LeeSah.sampleSpine_preserves
