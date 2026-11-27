@@ -28,3 +28,4 @@ shopt -s nullglob
 for verifier in results/*/verify.py archive/*/verify.py; do
   python3 "$verifier"
 done
+./research/shifted-grid-moments/verify.sh
