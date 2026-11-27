@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if ! command -v lake >/dev/null && [[ -x "${ELAN_HOME:-$HOME/.elan}/bin/lake" ]]; then
+  export PATH="${ELAN_HOME:-$HOME/.elan}/bin:$PATH"
+fi
+
 cd "$(dirname "$0")/.."
 (
   cd lean

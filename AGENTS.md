@@ -4,4 +4,4 @@ For a new conjecture, find its original statement and check current papers, publ
 
 Use Lean for new resolutions. State the source conjecture with its original quantifiers, define the mathematical objects, and connect any stronger theorem to the source statement in Lean. Track the declaration in `lean/ProofAudit.lean` and `docs/lean-status.md`. Mark partial formalizations by the statement that actually compiles.
 
-Keep each result in `results/<slug>/` with a README, a written proof, and an audit. Link the result from the root catalog and history. Run `./scripts/verify.sh` before marking a result Lean-verified.
+Keep each result in `results/<slug>/` with a README, a written proof, and an audit. Link the result from the root catalog and history. Run `./scripts/verify.sh` locally before marking a result Lean-verified. Enable the pre-push hook in each working clone as described in the README and verify incoming pull requests locally before merging.

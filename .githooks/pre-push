@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+snapshots=$(mktemp -d)
+trap 'rm -rf -- "$snapshots"' EXIT
+
+while read -r local_ref oid remote_ref _; do
+  [[ "$local_ref" == "(delete)" ]] && continue
+  # A tag can point to a tree or blob, which has no commit to verify.
+  commit=$(git rev-list -1 "$oid")
+  [[ -n "$commit" ]] || continue
+  snapshot="$snapshots/$commit"
+  [[ -d "$snapshot" ]] && continue
+  mkdir "$snapshot"
+  git archive "$commit" | tar -x -C "$snapshot"
+  printf 'Verifying %s at %.12s locally\n' "$remote_ref" "$commit" >&2
+  (cd "$snapshot" && ./scripts/verify.sh) </dev/null
+done
