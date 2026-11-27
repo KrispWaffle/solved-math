@@ -17,7 +17,6 @@ class CatalogTest(unittest.TestCase):
         for index, expected in (
             ("README.md", results),
             ("CONTENTS.md", results | archive),
-            ("site/index.html", results | archive),
         ):
             text = (ROOT / index).read_text()
             with self.subTest(index=index):

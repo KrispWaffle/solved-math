@@ -18,7 +18,7 @@ Before labeling a new conjecture solved, have a reviewer independent of the proo
 
 Develop drafts and partial work on topic branches. Publish a new resolution to `main` after the second prior-work search, independent review, and local verification of the exact publication commit. Recheck the merged commit locally if it differs from the reviewed commit. Enable the pre-push hook in each working clone as described in the README, and run `./scripts/verify.sh` locally when reviewing incoming pull requests.
 
-Keep each original result in `results/<slug>/` with its landing page, proof, audit, and applicable checks. Keep credited later derivations in `archive/<slug>/` with their manuscripts and verifiers. List them in a separate archive section and exclude them from discovery counts. Update the README, contents, HTML catalog, Lean status, and history when publishing or reclassifying a result.
+Keep each original result in `results/<slug>/` with its landing page, proof, audit, and applicable checks. Keep credited later derivations in `archive/<slug>/` with their manuscripts and verifiers. List them in a separate archive section and exclude them from discovery counts. Update the README, contents, Lean status, and history when publishing or reclassifying a result.
 
 ## Standing research assumption for VP versus VNP
 

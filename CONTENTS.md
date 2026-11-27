@@ -18,4 +18,3 @@
 - [Research log](docs/research-log.md) records the derivations and prior-work searches.
 - [Lean status](docs/lean-status.md) lists the theorem declarations and how to reproduce the checks.
 - [History](HISTORY.md) dates the entries and corrections.
-- [HTML catalog](site/index.html) provides a browser index with links to the repository.
