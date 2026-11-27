@@ -25,3 +25,15 @@ The general declaration is SeparatedOverlap.separator. The source-facing corolla
 ## Direct check
 
 The Python verifier creates the adjacent-rank inequalities in each actual window and takes their transitive closure. It tests comparability with $K$ and looks for incomparable pairs in both sides without using the height formula. It checked 2,592 posets with overlaps two through four, including 276 cases satisfying the paper’s stricter endpoint conditions. As a check on the interpretation of “separator”, the verifier reproduces both examples in item 5. It finds three separators for 135268479 at overlap three and five for 479258136 at overlap six. It also rejects a chain and a two-window example whose upper side is a chain. [Verifier](verify.py)
+
+## Independent type checker
+
+Nanoda 0.4.17 checked the exported proof terms for both theorems and their dependencies, 1,882 declarations in all. Its permitted axioms were exactly `propext` and `Quot.sound`. To repeat this check in Bash after building the Lean project, run the following from `lean/` with the pinned toolchain.
+
+```bash
+set -o pipefail
+lake env leanexport SolvedMath.PatternSeparator -- \
+  SolvedMath.PatternSeparator.SeparatedOverlap.separator \
+  SolvedMath.PatternSeparator.bks_overlap_two_separator |
+  lake env nanoda_bin <(echo '{"use_stdin":true,"permitted_axioms":["propext","Quot.sound"],"unpermitted_axiom_hard_error":true,"nat_extension":true,"string_extension":true,"pp_to_stdout":true,"print_success_message":true}')
+```
