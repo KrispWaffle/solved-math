@@ -1,9 +1,7 @@
 # Separators in permutation-pattern posets
 
-Blitvić, Kammoun, and Steingrímsson proposed that a specific position separates a poset built by overlapping copies of a permutation. A separator is comparable with every position, with an incomparable pair strictly below it and another strictly above it. [Part I, §7, item 5](https://arxiv.org/html/2610.29846v1#S7)
+Blitvić, Kammoun, and Steingrímsson ask which overlapping permutation patterns produce a poset with a separator. Such a position compares with every position, and the positions strictly below and strictly above it each contain an incomparable pair. [Part I, §7, item 5](https://arxiv.org/html/2610.29846v1#S7)
 
-**Lean-verified theorem.** Suppose a length-$K$ permutation begins with $1,a$, ends with $b,c$, and $2<a<b<c-1<K-2$. In every stack of at least three occurrences overlapping in two positions, position $K$ of the first occurrence is a separator.
+**Classification for every compatible overlap.** For a pattern of length $K$, separator existence is constant from $4K+1$ windows onward. Two maps on the boundary ranks decide existence for any given number of windows. Testing the counts from $m+1$ through $4K+1$ decides whether a separator exists for every count greater than the overlap $m$. [Written proof](CLASSIFICATION.md) · [Lean theorems](../../lean/SolvedMath/SeparatorClassification.lean) · [Review and prior-work search](CLASSIFICATION-AUDIT.md) · [Executable rank test](classification.py)
 
-The same conclusion holds for any overlap size when the increasing prefix ranks all precede the increasing suffix ranks, the first rank is the minimum, and some pair of successive overlap positions has a gap on both lists. The interfix can have any ordering. The paper’s broader question of classifying all patterns with a separator remains open in this work.
-
-[Written proof](PROOF.md) · [Lean theorem](../../lean/SolvedMath/PatternSeparator.lean) · [Statement and prior-work audit](AUDIT.md) · [Direct checker](verify.py)
+**The specific family proposed in item 5.** Suppose a length-$K$ permutation begins with $1,a$, ends with $b,c$, and $2<a<b<c-1<K-2$. In every stack of at least three occurrences overlapping in two positions, position $K$ of the first occurrence is a separator. The same conclusion holds at arbitrary overlap sizes under a shared-gap condition. [Written proof](PROOF.md) · [Lean theorem](../../lean/SolvedMath/PatternSeparator.lean) · [Original audit](AUDIT.md) · [Physical-poset checker](verify.py)

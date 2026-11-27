@@ -6,7 +6,7 @@ Mathematical conjectures with written proofs and reproducible checks. New result
 
 | Result | Conclusion | Verification |
 |---|---|---|
-| [Separators in permutation-pattern posets](results/pattern-poset-separator/README.md) | The final position of the first window separates the poset for the family proposed by Blitvić, Kammoun, and Steingrímsson. A shared-gap condition extends the theorem to arbitrary overlap sizes. | Lean 4, kernel replay, direct enumeration |
+| [Separators in permutation-pattern posets](results/pattern-poset-separator/README.md) | For every compatible overlap, boundary ranks decide separator existence at any occurrence count. Existence stabilizes by $4K+1$ windows for pattern length $K$. The proposed overlap-two family also has an explicit separator. | Lean 4, kernel replay, direct enumeration |
 
 The [contents](CONTENTS.md) link to the proofs, their scope, and the code.
 

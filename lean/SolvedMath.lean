@@ -1,1 +1,2 @@
 import SolvedMath.PatternSeparator
+import SolvedMath.SeparatorClassification

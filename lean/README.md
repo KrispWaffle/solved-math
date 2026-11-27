@@ -1,6 +1,6 @@
 # Lean proofs
 
-SolvedMath imports each verified result. ProofAudit checks the axiom dependencies of both separator declarations. The pinned toolchain and the empty dependency manifest allow the project to build with the Lean core library alone.
+SolvedMath imports each verified result. ProofAudit checks the axiom dependencies of the source-facing theorems and intermediate comparison lemmas. The pinned toolchain and the empty dependency manifest allow the project to build with the Lean core library alone.
 
 From this directory, run
 

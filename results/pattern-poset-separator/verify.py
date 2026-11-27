@@ -85,4 +85,7 @@ def verify():
 
 
 if __name__ == "__main__":
+    from classification import crosscheck
+
     verify()
+    crosscheck(order, is_separator)

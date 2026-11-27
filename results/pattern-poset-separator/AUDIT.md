@@ -2,7 +2,7 @@
 
 ## Problem and scope
 
-Blitvić, Kammoun, and Steingrímsson ask for a characterization of pattern posets with a separator. In the same item they propose that position $K$ always works for overlap two under explicit inequalities on the prefix and suffix. The Lean theorem proves that entire proposed family for all pattern lengths, all middle orders, and every $j>2$. The arbitrary-overlap theorem gives a sufficient condition for the broader question. A necessary and sufficient characterization for all patterns is outside these conclusions. [Part I, §7, item 5](https://arxiv.org/html/2610.29846v1#S7)
+Blitvić, Kammoun, and Steingrímsson ask for a characterization of pattern posets with a separator. In the same item they propose that position $K$ always works for overlap two under explicit inequalities on the prefix and suffix. The Lean theorem proves that entire proposed family for all pattern lengths, all middle orders, and every $j>2$. The arbitrary-overlap theorem gives a sufficient condition for the broader question. The later [classification and separate review](CLASSIFICATION-AUDIT.md) address the general question. [Part I, §7, item 5](https://arxiv.org/html/2610.29846v1#S7)
 
 ## Correspondence with the paper
 
