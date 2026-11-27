@@ -1,7 +1,18 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Logic.Equiv.Fin.Basic
+public import SolvedMath.ClusterOrderStatistics
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Ring
 
 /-! Source statement of Lee and Sah's Conjecture 6.1. An extension is a
 bijection with the ranks that respects every spine and branch chain. -/
+@[expose] public section
 namespace LeeSah
 open Filter MeasureTheory Set
 open scoped Topology Interval
@@ -46,6 +57,40 @@ def Conjecture61 : Prop :=
 theorem element_card (p q c n : ℕ) : Fintype.card (Element p q c n) = (p+q+c)*n+1 := by
   simp only [Element, Fintype.card_sum, Fintype.card_fin, Fintype.card_prod]
   ring
+
+/-- An explicit legal extension that puts the lower branches before the spine and the upper branches after it. -/
+def blockOrder (p q c n : ℕ) : Ranking p q c n :=
+  let reorder := ((Equiv.sumAssoc (Fin (n*c+1)) (Fin n × Fin p) (Fin n × Fin q)).symm.trans
+    (Equiv.sumCongr (Equiv.sumComm _ _) (Equiv.refl _))).trans (Equiv.sumAssoc _ _ _)
+  let after := (Equiv.sumCongr (Equiv.refl (Fin (n*c+1))) (@finProdFinEquiv n q)).trans finSumFinEquiv
+  (reorder.trans ((Equiv.sumCongr (@finProdFinEquiv n p) after).trans finSumFinEquiv)).trans
+    (finCongr (by rw [element_card]; ring))
+
+lemma isExtension_blockOrder (p q c n : ℕ) : IsExtension (blockOrder p q c n) := by
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩
+  · intro i j hij
+    change n*p+i.val < n*p+j.val
+    omega
+  · intro w i j hij
+    change i.val+p*w.val < j.val+p*w.val
+    omega
+  · intro w i j hij
+    change n*p+(n*c+1+(i.val+q*w.val)) < n*p+(n*c+1+(j.val+q*w.val))
+    omega
+  · intro w j
+    have h := (finProdFinEquiv (w,j)).isLt
+    change j.val+p*w.val < n*p at h
+    change j.val+p*w.val < n*p+_
+    omega
+  · intro w j
+    have h := (mark c w.succ).isLt
+    change n*p+(mark c w.succ).val < n*p+(n*c+1+(j.val+q*w.val))
+    omega
+
+lemma extension_count_pos (p q c n : ℕ) : 0 < Nat.card {e : Ranking p q c n // IsExtension e} := by
+  have : Nonempty {e : Ranking p q c n // IsExtension e} :=
+    ⟨⟨blockOrder p q c n, isExtension_blockOrder p q c n⟩⟩
+  exact Nat.card_pos
 
 theorem badFraction_nonneg (p q c n : ℕ) (ε : ℝ) : 0 ≤ badFraction p q c n ε := by
   unfold badFraction
@@ -175,15 +220,3 @@ theorem conjecture61_of_tail_bound
 
 end
 end LeeSah
-
-/-- info: 'LeeSah.density_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in
-#print axioms LeeSah.density_sandwich
-
-/-- info: 'LeeSah.tilt_bound' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in
-#print axioms LeeSah.tilt_bound
-
-/-- info: 'LeeSah.conjecture61_of_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in
-#print axioms LeeSah.conjecture61_of_tail_bound

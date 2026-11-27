@@ -8,6 +8,13 @@ fi
 cd "$(dirname "$0")/.."
 (
   cd lean
+  if [[ ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/IntervalIntegral/Basic.olean ]]; then
+    lake exe cache get Mathlib.Analysis.SpecialFunctions.Pow.Real Mathlib.Data.Fintype.Card \
+      Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic Mathlib.Logic.Equiv.Fin.Basic \
+      Mathlib.Probability.Moments.SubGaussian Mathlib.Data.Fin.Tuple.Sort \
+      Mathlib.MeasureTheory.Constructions.UnitInterval Mathlib.Tactic.FieldSimp \
+      Mathlib.Tactic.Linarith Mathlib.Tactic.Positivity Mathlib.Tactic.Ring
+  fi
   lake build
   lake env leanchecker --fresh --verbose SolvedMath
 )

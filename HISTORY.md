@@ -2,6 +2,8 @@
 
 ## November 27, 2026
 
+- Added a reviewed written proof of Lee and Sah’s random-height conjecture for every cluster poset in Definition 1.3, with an exponential bound for simultaneous deviations. Lean checks the comparison inequalities and the implication from the tail estimate. [Proof](results/lee-sah-cluster-height/PROOF.md) · [Lean scope and review](results/lee-sah-cluster-height/AUDIT.md)
+
 - Added the general algorithmic characterization to the existing separator problem. It classifies every occurrence count using boundary ranks and proves uniform stabilization at $4K+1$. [Proof](results/pattern-poset-separator/CLASSIFICATION.md) · [Review and local checks](results/pattern-poset-separator/CLASSIFICATION-AUDIT.md)
 
 - Moved the [big-descent](archive/big-descents/README.md) and [packing-cutoff](archive/packing-cutoff/README.md) manuscripts and checkers into the archive of later derivations. The separator theorem remains in the original-results catalog.

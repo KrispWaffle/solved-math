@@ -1,11 +1,12 @@
 # Solved Math
 
-Mathematical conjectures with written proofs and reproducible checks. New results include a Lean theorem stated in the terms of the original problem.
+Mathematical conjectures with written proofs and reproducible checks. Each result states the original problem and identifies the parts verified in Lean.
 
 ## Results
 
 | Result | Conclusion | Verification |
 |---|---|---|
+| [Lee–Sah cluster-poset heights](results/lee-sah-cluster-height/README.md) | All marked ranks in a uniform extension concentrate simultaneously on the inverse beta curve. | Independently reviewed written proof, partial Lean verification, exact rank checks |
 | [Separators in permutation-pattern posets](results/pattern-poset-separator/README.md) | For every compatible overlap, boundary ranks decide separator existence at any occurrence count. Existence stabilizes by $4K+1$ windows for pattern length $K$. The proposed overlap-two family also has an explicit separator. | Lean 4, kernel replay, direct enumeration |
 
 The [contents](CONTENTS.md) link to the proofs, their scope, and the code.

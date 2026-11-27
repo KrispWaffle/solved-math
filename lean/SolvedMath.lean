@@ -1,2 +1,3 @@
 import SolvedMath.PatternSeparator
 import SolvedMath.SeparatorClassification
+import SolvedMath.ClusterHeight
