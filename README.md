@@ -10,13 +10,6 @@ Mathematical conjectures with written proofs and reproducible checks. New result
 
 The [contents](CONTENTS.md) link to the proofs, their scope, and the code.
 
-## Archive
-
-Cinna Davis posted proofs of these two statements on November 26, 2026. The archive preserves our later derivations and exact Python checks. [Priority history](HISTORY.md)
-
-- [Schur positivity of big descents](archive/big-descents/README.md) gives a tableau formula at each exact longest increasing subsequence length.
-- [No universal packing cutoff](archive/packing-cutoff/README.md) constructs pairs of patterns whose packing counts first differ arbitrarily late.
-
 ## Verify locally
 
 Install Python 3 and the Lean toolchain manager Elan. To run the full suite from the repository root, use
