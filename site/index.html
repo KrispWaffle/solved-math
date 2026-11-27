@@ -8,9 +8,10 @@
     :root { color-scheme: light dark; --paper: #f9f7ef; --ink: #252820; --link: #165d49; --rule: #cbcfc3; }
     body { max-width: 48rem; margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem); background: var(--paper); color: var(--ink); font: 1.05rem/1.55 "Source Sans 3", system-ui, sans-serif; }
     nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
-    h1, h2 { font-family: "Spectral", Georgia, serif; line-height: 1.15; }
+    h1, h2, h3 { font-family: "Spectral", Georgia, serif; line-height: 1.15; }
     h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); margin: 1.1em 0 .4em; }
-    h2 { font-size: 1.55rem; margin: 0; }
+    h2 { font-size: 1.9rem; margin: 1.4em 0 .4em; }
+    h3 { font-size: 1.55rem; margin: 0; }
     article { padding: 1.4rem 0; border-top: 1px solid var(--rule); }
     article p { margin: .5rem 0; }
     a { color: var(--link); text-underline-offset: .18em; }
@@ -28,17 +29,20 @@
   </nav>
   <main>
     <h1>Solved Math</h1>
+    <h2>Results</h2>
     <article>
-      <h2><a href="https://github.com/KrispWaffle/solved-math/blob/main/results/pattern-poset-separator/README.md">Separators in permutation-pattern posets</a></h2>
+      <h3><a href="https://github.com/KrispWaffle/solved-math/blob/main/results/pattern-poset-separator/README.md">Separators in permutation-pattern posets</a></h3>
       <p>Lean proves that the final position of the first window separates every poset in the proposed family, and gives a sufficient condition for arbitrary overlap sizes.</p>
     </article>
+    <h2>Archive</h2>
+    <p>Cinna Davis posted proofs of both statements on November 26, 2026. These manuscripts give later derivations.</p>
     <article>
-      <h2><a href="https://github.com/KrispWaffle/solved-math/blob/main/results/big-descents/README.md">Schur positivity of big descents</a></h2>
-      <p>A tableau formula for permutations with a fixed longest increasing subsequence length. Written derivation with exact checks, following an earlier proof of positivity.</p>
+      <h3><a href="https://github.com/KrispWaffle/solved-math/blob/main/archive/big-descents/README.md">Schur positivity of big descents</a></h3>
+      <p>A tableau formula for permutations with a fixed longest increasing subsequence length, with exact checks.</p>
     </article>
     <article>
-      <h2><a href="https://github.com/KrispWaffle/solved-math/blob/main/results/packing-cutoff/README.md">No universal packing cutoff</a></h2>
-      <p>Pairs of patterns can first differ arbitrarily far into their counting sequences. Written construction with exact checks, following an earlier negative answer.</p>
+      <h3><a href="https://github.com/KrispWaffle/solved-math/blob/main/archive/packing-cutoff/README.md">No universal packing cutoff</a></h3>
+      <p>Pairs of patterns can first differ arbitrarily far into their counting sequences. The manuscript gives a construction and exact checks.</p>
     </article>
   </main>
 </body>

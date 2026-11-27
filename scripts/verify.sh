@@ -12,6 +12,7 @@ cd "$(dirname "$0")/.."
   lake env leanchecker --fresh --verbose SolvedMath
 )
 python3 -m unittest discover -s tests
-for verifier in results/*/verify.py; do
+shopt -s nullglob
+for verifier in results/*/verify.py archive/*/verify.py; do
   python3 "$verifier"
 done

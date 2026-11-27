@@ -10,13 +10,18 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class CatalogTest(unittest.TestCase):
-    def test_all_result_directories_are_indexed(self):
-        results = {path.parent.name for path in (ROOT / "results").glob("*/README.md")}
-        self.assertTrue(results)
+    def test_results_and_archived_manuscripts_are_indexed(self):
+        pages = {
+            page.relative_to(ROOT).as_posix()
+            for collection in ("results", "archive")
+            for page in (ROOT / collection).glob("*/README.md")
+        }
+        self.assertTrue(pages)
         for index in ("README.md", "CONTENTS.md", "site/index.html"):
             text = (ROOT / index).read_text()
             with self.subTest(index=index):
-                self.assertEqual(set(re.findall(r"results/([\w-]+)/README\.md", text)), results)
+                links = re.findall(r"(?:results|archive)/[\w-]+/README\.md", text)
+                self.assertEqual(set(links), pages)
 
     def test_relative_links(self):
         for document in ROOT.rglob("*.md"):
