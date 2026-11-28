@@ -1,0 +1,17 @@
+# An explicit comparison in the original inversion coordinates
+
+Write $a_n(k)$ for the number of 1324-avoiding permutations of length $n$ with $k$ inversions. For every $n\ge1024$ and $0\le k\le\binom n2$ with $64(\binom n2-k)\le n$,
+```math
+ a_{n+1}(k)\ \ge\ 2^{\lfloor n/32\rfloor} a_n(k).
+```
+The Lean theorem `PrincipalInversionMonotonicity.cjs_upper_edge` proves this inequality for the actual finite sets. It uses the same $k$ at both lengths. [Source declaration](PrincipalStrip.lean) · [CJS Conjecture 13](https://arxiv.org/pdf/1111.5736#page=10)
+
+The proof works for any family that contains every reversal of a layered permutation. A layered permutation is a direct sum of decreasing blocks. Reversing a word swaps inversion and noninversion counts. At length $n$, write $j=\binom n2-k$. At length $n+1$, the desired complementary weight is $n+j$.
+
+**Upper bound at length $n$.** Let $b$ be the size of any family at inversion weight $j$. Its right-inversion digits are nonnegative integers with sum $j$, and they determine the permutation on its known alphabet. For each of the $n$ digits independently choose one of 15 colored delimiters. Encode digit $d$ as $d$ zero symbols followed by its delimiter. The code has length $n+j$ on 16 symbols, and its zero runs and delimiters recover the digits and colors. Hence $15^n b\le16^{n+j}$. Using $16^8<2\cdot15^8$ gives $b\le2^E$ whenever $n+32j\le8E$. [Encoding and upper bound](SparseCoefficients.lean)
+
+**Lower bound at length $n+1$.** Put $m=\lfloor n/4\rfloor$. Concatenate $m$ length-three blocks chosen independently from 132 and 213. Each block has one inversion, and both are layered. The remaining $t=n+j-m$ inversions can be filled on $l=n+1-3m$ positions. Indeed put $s=\lfloor\sqrt{2t}\rfloor$. We have $s^2\le3n$. If $s\le64$, then $3(s+1)\le l$ follows from $n\ge1024$. Otherwise $39s\le s^2\le3n$ implies the same bound. The exact decreasing-block filler supplies the prescribed last $l$ positions. The initial block boundaries distinguish all $2^m$ outputs. Finally $E=m-\lfloor n/32\rfloor$ satisfies $n+32j\le8E$ under the assumed bounds. [Packing and finite inequality](LayeredStrip.lean) · [Exact filler and direct sum](UpperEdge.lean)
+
+Every layered permutation avoids 4231. If such an occurrence crossed a block boundary, its first entry would lie below its last. Inside a decreasing block the two middle entries cannot ascend. Reversal exchanges 4231 and 1324, so the general comparison applies.
+
+Two wider applications follow from the same theorem. Every principal pattern beginning at its minimum and ending at its maximum, with a descent, is absent from reversals of layered permutations. An occurrence meeting two descending-ordered blocks would begin above its last entry, whereas one wholly in an increasing block would have no descent. For the remaining nonidentity patterns CJS Lemma 19 already proves ordinary monotonicity at every weight. Thus the upper strip satisfies CJS Conjecture 20 for all nonidentity patterns with a common length threshold. Also every reversal of a layered permutation avoids 213. The CLUV class requiring the suffix after a prefix of length $i$ to avoid 213 and the whole word to avoid 1324 contains all these reversals, for every $i$. The resulting exponential bound holds simultaneously for every class in CLUV Conjecture 4.5. [General Lean declaration](PrincipalStrip.lean) · [CJS Lemma 19 and Conjecture 20](https://arxiv.org/pdf/1111.5736#page=12) · [CLUV Conjecture 4.5](https://arxiv.org/html/2604.01143v2#S4)
