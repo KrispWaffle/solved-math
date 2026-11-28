@@ -393,3 +393,43 @@ open SolvedMath.PatternSeparator
 /-- info: 'RandomInversionConnectivity.verkama_connectivity' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms RandomInversionConnectivity.verkama_connectivity
+
+/-- info: 'BipartiteInducedIsomorphism.capacity' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.capacity
+
+/-- info: 'BipartiteInducedIsomorphism.path_eight_free' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.path_eight_free
+
+/-- info: 'BipartiteInducedIsomorphism.path_six_free' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.path_six_free
+
+/-- info: 'BipartiteInducedIsomorphism.chair_orders' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.chair_orders
+
+/-- info: 'BipartiteInducedIsomorphism.two_stars_fit' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.two_stars_fit
+
+/-- info: 'BipartiteInducedIsomorphism.blocker_fits' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.blocker_fits
+
+/-- info: 'BipartiteInducedIsomorphism.packing_by_capacities' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.packing_by_capacities
+
+/-- info: 'BipartiteInducedIsomorphism.saturation' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.saturation
+
+/-- info: 'BipartiteInducedIsomorphism.path_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.path_dichotomy
+
+/-- info: 'BipartiteInducedIsomorphism.path_form_false' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms BipartiteInducedIsomorphism.path_form_false

@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Disproved Alecu, Lozin and Malyshev’s proposed classification for induced subgraph isomorphism. The new reduction gives NP-completeness whenever the forbidden path has six or more vertices, completing the dichotomy with their positive result. [Proof](results/bipartite-induced-isomorphism/PROOF.md) · [Review](results/bipartite-induced-isomorphism/AUDIT.md)
+
 - Determined the probability of every fixed connectivity gap and the conditional minimum-degree limit for uniform random permutation graphs. [Written proof](results/random-inversion-connectivity/GAPS.md)
 - Completed the Lean proof that vertex connectivity equals minimum degree with probability tending to one for uniform random permutations. The proof counts rectangle hits over the exact finite sample space. [Checked theorem](lean/SolvedMath/RandomInversionProbability.lean) · [Formal scope and review](results/random-inversion-connectivity/AUDIT.md)
 

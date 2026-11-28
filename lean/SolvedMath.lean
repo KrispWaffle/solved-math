@@ -10,3 +10,5 @@ import SolvedMath.HigherInversionSeries
 import SolvedMath.InversionCompatibility
 import SolvedMath.ResidualBase
 import SolvedMath.RandomInversionProbability
+import SolvedMath.StarForestPacking
+import SolvedMath.InducedIsomorphismStatement

@@ -23,7 +23,9 @@ cd "$(dirname "$0")/.."
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Ring.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Permutation.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Sublists.olean ||
-        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Finite.olean ]]; then
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Finite.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Combinatorics/SimpleGraph/Maps.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/TuringMachine/PostTuringMachine.olean ]]; then
     lake exe cache get Mathlib.Analysis.SpecialFunctions.Pow.Real Mathlib.Data.Fintype.Card \
       Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic Mathlib.Logic.Equiv.Fin.Basic \
       Mathlib.MeasureTheory.Integral.Prod Mathlib.MeasureTheory.Integral.Pi \
@@ -42,7 +44,9 @@ cd "$(dirname "$0")/.."
       Mathlib.Combinatorics.Derangements.Basic Mathlib.Order.Circular.ZMod Mathlib.Analysis.SpecificLimits.Basic \
       Mathlib.Order.Interval.Finset.Fin Mathlib.Data.Fin.Rev \
       Mathlib.Analysis.SpecificLimits.Normed Mathlib.Algebra.Order.Floor.Ring \
-      Mathlib.Data.List.Permutation Mathlib.Data.List.Sublists Mathlib.SetTheory.Cardinal.Finite
+      Mathlib.Data.List.Permutation Mathlib.Data.List.Sublists Mathlib.SetTheory.Cardinal.Finite \
+      Mathlib.Combinatorics.SimpleGraph.Maps Mathlib.Computability.TuringMachine.PostTuringMachine \
+      Mathlib.Data.Fintype.BigOperators Mathlib.Algebra.Order.BigOperators.Group.Finset
   fi
   lake build
   lake env leanchecker --fresh --verbose SolvedMath
