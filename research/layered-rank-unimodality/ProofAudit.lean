@@ -1,5 +1,6 @@
 import BoxProfiles
-import PeakPolynomial
+import MaximalBlocks
+import ExitSupport
 
 /-- info: 'LayeredRanks.greedy_succeeds_iff' depends on axioms: [propext, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
@@ -52,3 +53,35 @@ import PeakPolynomial
 /-- info: 'LayeredRanks.periodic_geometric_sum' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms LayeredRanks.periodic_geometric_sum
+
+/-- info: 'LayeredRanks.exitPoly_joinBlocks' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.exitPoly_joinBlocks
+
+/-- info: 'LayeredRanks.rankPoly_joinBlocks' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.rankPoly_joinBlocks
+
+/-- info: 'LayeredRanks.rankCount_perm_blocks' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.rankCount_perm_blocks
+
+/-- info: 'LayeredRanks.embeds_raise_one' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.embeds_raise_one
+
+/-- info: 'LayeredRanks.exitPoly_eq_new_words' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.exitPoly_eq_new_words
+
+/-- info: 'LayeredRanks.exitPoly_coeff_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.exitPoly_coeff_nonneg
+
+/-- info: 'LayeredRanks.exitPoly_coeff_no_gaps' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.exitPoly_coeff_no_gaps
+
+/-- info: 'LayeredRanks.exitPoly_top_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.exitPoly_top_coeffs

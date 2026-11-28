@@ -13,7 +13,7 @@ objects=$(mktemp -d)
 trap 'rm -rf -- "$objects"' EXIT
 lake env bash -eu -c '
   export LEAN_PATH="$1:$LEAN_PATH"
-  for module in GreedyBoxes BoxProfiles PeakPolynomial; do
+  for module in GreedyBoxes BoxProfiles PeakPolynomial MaximalBlocks ExitSupport; do
     lean -DwarningAsError=true --root="$2" -o "$1/$module.olean" "$2/$module.lean"
     leanchecker --fresh --verbose "$module"
   done

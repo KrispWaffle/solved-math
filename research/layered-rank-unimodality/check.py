@@ -2,6 +2,7 @@
 from fractions import Fraction
 from functools import cache
 from itertools import accumulate, product
+from math import prod
 
 
 def compositions(n):
@@ -170,6 +171,70 @@ def check_period_modes():
     return cases
 
 
+
+def maximum_gaps(host, maximum):
+    gaps = [[]]
+    for part in host:
+        if part == maximum:
+            gaps.append([])
+        else:
+            gaps[-1].append(part)
+    return [tuple(gap) for gap in gaps]
+
+
+def check_block_factorization(host):
+    maximum = max(host)
+    gaps = maximum_gaps(host, maximum)
+    a = peak_polynomial(host)
+    exits = []
+    for gap in gaps:
+        base = peak_polynomial(gap)
+        extended = peak_polynomial(gap + (maximum,))
+        exits.append(tuple(v - coefficient(base, i) for i, v in enumerate(extended)))
+    # Move an end gap into the interior and reconstruct the literal host.
+    reordered = gaps[1::2] + gaps[::2]
+    permuted = tuple(n for gap in reordered[:-1] for n in (*gap, maximum)) + reordered[-1]
+    assert peak_polynomial(permuted) == a
+    p = [1]
+    for q in exits:
+        p = convolution(p, q)
+    assert tuple(p) == tuple(int(r == 0) - coefficient(a, r) +
+                             sum(coefficient(a, r-s) for s in range(1, maximum+1))
+                             for r in range(sum(host)+maximum+1))
+    def moments(q):
+        mass = sum(q)
+        mean = Fraction(sum(i*v for i, v in enumerate(q)), mass)
+        variance = Fraction(sum(i*i*v for i, v in enumerate(q)), mass) - mean**2
+        return mean, variance
+    mass = prod(sum(q) for q in exits)
+    assert (maximum-1)*sum(a) == mass-1
+    mean, variance = map(sum, zip(*(moments(q) for q in exits)))
+    scale = Fraction(mass, mass-1)
+    shift = Fraction(sum(range(1, maximum+1)), maximum-1)
+    correction = Fraction(sum(i*i for i in range(1, maximum+1)), maximum-1)-shift**2
+    assert moments(a) == (scale*mean-shift, scale*variance-scale*mean**2/(mass-1)-correction)
+
+
+def check_varying_blocks():
+    tested = 0
+    for length in range(1, 7):
+        for host in product((1, 2, 3), repeat=length):
+            if max(host) >= 2:
+                check_block_factorization(host)
+                tested += 1
+    # A deterministic nonperiodic sequence of distinctly ordered gap types.
+    types = ((), (1,), (1, 2), (2, 1, 2), (2, 2, 1), (1, 1, 2, 1, 1))
+    for m in (31, 62, 93):
+        gaps = [types[(i.bit_count()+i.bit_length()) % len(types)] for i in range(m+1)]
+        host = tuple(n for gap in gaps[:-1] for n in (*gap, 3)) + gaps[-1]
+        check_block_factorization(host)
+        ranks = peak_polynomial(host)
+        peak = ranks.index(max(ranks))
+        assert list(ranks[:peak+1]) == sorted(ranks[:peak+1])
+        assert list(ranks[peak:]) == sorted(ranks[peak:], reverse=True)
+        tested += 1
+    return tested
+
 def check():
     tested = inequalities = 0
     for n in range(11):
@@ -198,6 +263,7 @@ def check():
     print(f"Checked {tested} hosts, {inequalities} two-peak second differences, "
           f"and {check_strings()} tensor string decompositions.")
     print(f"Checked {check_periods()} periodic transitions and {check_period_modes()} exact peak-location examples.")
+    print(f"Checked block products, gap permutations and both exact rank moments on {check_varying_blocks()} hosts.")
 
 
 if __name__ == "__main__":

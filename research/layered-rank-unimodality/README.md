@@ -16,4 +16,6 @@ For every composition, the ranks weakly decrease starting at the integer part of
 
 Repeating any fixed composition sufficiently many times also gives a unimodal rank sequence. For a period containing a letter greater than one, the proof gives a Gaussian limit for the weight of a uniformly chosen distinct word and restricts every mode to the nearest integer or integers to an explicit expression. Lean checks the exact generating polynomial at every repetition. [Powers of a composition](PERIODIC-HOSTS.md) · [Formal polynomial identities](PeakPolynomial.lean)
 
+For an arbitrary fixed distribution on a finite alphabet of positive parts, almost surely every sufficiently long prefix has a unimodal rank sequence. The underlying deterministic theorem allows arbitrary orders, requires the maximum to have positive density, and permits gaps of polylogarithmic length. It also gives the limiting rank distribution and locates the modes. [Nonperiodic hosts and random words](NONPERIODIC-HOSTS.md) · [Permuting the gaps in Lean](MaximalBlocks.lean) · [Positive support of each factor](ExitSupport.lean)
+
 Run the local repository verifier with `./scripts/verify.sh`, or check only this topic with `bash research/layered-rank-unimodality/verify.sh`. The unrestricted conjecture remains open. [Audit and attribution](AUDIT.md)
