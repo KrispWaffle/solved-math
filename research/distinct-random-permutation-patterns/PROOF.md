@@ -19,6 +19,8 @@ Give $n$ labels two independent uniform linear orders, called horizontal and ver
 
 Label symmetry permits keeping $S$ fixed. Call a red-white pair individually interchangeable when the map sending that red to the white and **fixing each other red** preserves both orders. Equivalently, no other red label lies between the two in either order. Let $W$ count these pairs. We prove that $K(S)=2^W$ with probability tending to one and $W$ converges to $\mathrm{Poisson}(4(1-p)/p)$.
 
+Fokuoh’s 2018 thesis already counted same-rank single exchanges by the horizontal and vertical gaps and their intersection (Theorem 4.1, Type A repeats). The issue for the mean is that several exchanges can coexist and other bijections can move common labels. The following support estimate handles those alternatives. [Fokuoh’s thesis](https://dc.etsu.edu/etd/3461/)
+
 ## Counting nonlocal bijections
 
 For a candidate bijection $\phi:S\to T$, put $b=|S\setminus T|$ and let $l$ be the number of red labels moved by $\phi$. An increasing bijection cannot have a nontrivial directed cycle: an increase or decrease at any edge would persist around the cycle. Removing the $f=m-l$ fixed points therefore leaves $b$ directed paths with $l$ edges and $l+b$ vertices altogether. Each starts at a red label outside $T$ and ends at a white label. Apart from the identity, $1\le b\le l$.
