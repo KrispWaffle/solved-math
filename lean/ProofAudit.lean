@@ -221,3 +221,43 @@ open SolvedMath.PatternSeparator
 /-- info: 'DerangementSpectrum.fixed_growth_spectrum_of_labelled_classes' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms DerangementSpectrum.fixed_growth_spectrum_of_labelled_classes
+
+/-- info: 'StableInversions.avoids1243_insert' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.avoids1243_insert
+
+/-- info: 'StableInversions.cutoff_132_insert' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.cutoff_132_insert
+
+/-- info: 'StableInversions.cutoff_inversion_insert' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.cutoff_inversion_insert
+
+/-- info: 'StableInversions.invCount_insert' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.invCount_insert
+
+/-- info: 'StableInversions.historyEquiv' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.historyEquiv
+
+/-- info: 'StableInversions.sourceCount_eq_histories' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.sourceCount_eq_histories
+
+/-- info: 'StableInversions.paddingEquiv' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.paddingEquiv
+
+/-- info: 'StableInversions.sourceCount_stable' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.sourceCount_stable
+
+/-- info: 'StableInversions.MarkedPartition.partitionEquiv' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.MarkedPartition.partitionEquiv
+
+/-- info: 'StableInversions.MarkedPartition.stable_1243_partition_formula' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms StableInversions.MarkedPartition.stable_1243_partition_formula

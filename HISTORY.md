@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Answered Claesson, Linusson, Ulfarsson and Verkama’s Problem 8.3 with a length-independent partition formula for every stable inversion count of 1243-avoiding permutations. Lean proves the coefficient identity for the original permutations. The written proof also gives the first length at which each marked partition appears. [Proof](results/stable-inversion-enumeration/PROOF.md) · [Independent review and prior work](results/stable-inversion-enumeration/AUDIT.md)
+
 - Proved that the growth rate and limiting derangement proportion can be prescribed independently on Bevan’s entire upper ray. The proof constructs a sum-closed class at every growth rate on the ray, settling that range of Vatter’s Conjecture 10.1. [Joint result](results/derangement-limit-spectrum/PRESCRIBED-GROWTH.md) · [Lean scope](docs/lean-status.md)
 
 - Classified derangement limits for polynomial-growth classes in the existing derangement package. Both parity subsequences have rational limits. The normalized fixed-point count has an explicit mixture of beta laws and endpoint masses. Lean proves every rational witness with its exact eventual counts. [Proof and prior special cases](results/derangement-limit-spectrum/POLYNOMIAL-CLASSES.md)
