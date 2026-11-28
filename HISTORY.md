@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Determined all five tertiary inversion series. This proves the three predicted relations to the known primary limits, explains the negative constant for 2143, and identifies the 4231 series with two independent partitions into distinct parts. Lean checks the signed coefficient formula on the template cores at every degree. [Formulas and attribution](results/higher-inversion-limits/TERTIARY-SERIES.md) · [Independent review](results/higher-inversion-limits/AUDIT.md)
+
 - Resolved Problem 8.4 on higher inversion limits. Diagonal first differences are eventually affine for any finite additional basis over 1324. The complete classification identifies the six nontrivial secondary representatives and the five that need a tertiary difference. Each signed coefficient has an explicit template formula. [General theorem](results/higher-inversion-limits/PROOF.md) · [Classification](results/higher-inversion-limits/CLASSIFICATION.md) · [Independent audit](results/higher-inversion-limits/AUDIT.md)
 
 - Answered Claesson, Linusson, Ulfarsson and Verkama’s Problem 8.3 with a length-independent partition formula for every stable inversion count of 1243-avoiding permutations. Lean proves the coefficient identity for the original permutations. The written proof also gives the first length at which each marked partition appears. [Proof](results/stable-inversion-enumeration/PROOF.md) · [Independent review and prior work](results/stable-inversion-enumeration/AUDIT.md)

@@ -301,3 +301,23 @@ open SolvedMath.PatternSeparator
 /-- info: 'HigherInversionLimits.problem84_of_template_formula' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms HigherInversionLimits.problem84_of_template_formula
+
+/-- info: 'HigherInversionLimits.Series.five_rule_certificate' depends on axioms: [propext] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Series.five_rule_certificate
+
+/-- info: 'HigherInversionLimits.Series.overlap_indicators' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Series.overlap_indicators
+
+/-- info: 'HigherInversionLimits.Series.coefficientTerm_eq_rule' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Series.coefficientTerm_eq_rule
+
+/-- info: 'HigherInversionLimits.Series.orbit_sum' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Series.orbit_sum
+
+/-- info: 'HigherInversionLimits.Series.five_tertiary_convolutions' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Series.five_tertiary_convolutions

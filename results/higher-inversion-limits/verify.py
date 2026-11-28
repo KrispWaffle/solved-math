@@ -79,6 +79,34 @@ def small_words(length, forbidden):
             if forbidden not in patterns(word, 3))
 
 
+def check_series_rules(gamma, delta, boundary, symmetry, base, variants):
+    """Check both sides of the exact closed-series table on every small pair of witnesses."""
+    first_last = boundary == "first-last"
+    for name, partner in zip(TERTIARY, REPRESENTATIVES[len(SECONDARY):]):
+        target = symmetry(partner)
+        base_has = target in base
+        growth = [target in variant for variant in variants]
+        if name == "2143" and first_last:
+            cores_have = ((2, 1) in patterns(gamma, 2) or (2, 1) in patterns(delta, 2))
+            assert base_has and all(value == cores_have for value in growth)
+            continue
+        if name == "2413" and (not first_last or symmetry is inverse):
+            threshold, core_has = 0, False
+        elif name == "2431" and first_last and symmetry is inverse:
+            threshold, core_has = 1, (4, 1, 3, 2) in patterns(delta, 4)
+        elif name == "3412" and not first_last:
+            threshold = 1
+            core_has = target in patterns(gamma, 4) or target in patterns(delta, 4)
+        elif name == "4231" and first_last:
+            threshold = 2
+            core_has = (2, 3, 1) in patterns(gamma, 3) or (3, 1, 2) in patterns(delta, 3)
+        else:
+            assert all(value == base_has for value in growth)
+            continue
+        assert base_has == core_has, (name, gamma, delta, boundary)
+        assert growth == [core_has or t >= threshold for t in range(5)]
+
+
 def occurrence_certificates():
     differences = set()
     witnesses = 0
@@ -93,6 +121,7 @@ def occurrence_certificates():
                                     for t in range(5)]
                         assert (1, 3, 2, 4) not in base
                         assert all((1, 3, 2, 4) not in variant for variant in variants)
+                        check_series_rules(gamma, delta, boundary, symmetry, base, variants)
                         for pattern in REPRESENTATIVES:
                             target = symmetry(pattern)
                             if any((target in base) != (target in variant)
@@ -134,7 +163,7 @@ def first_slopes(bound):
 if __name__ == "__main__":
     count = occurrence_certificates()
     slopes = first_slopes(2)
-    print(f"Checked {count} pairs of witness patterns in four boundary orientations.")
+    print(f"Checked {count} pairs of witness patterns in four orientations, including the five closed-series identities.")
     expected = {"2143": [-2, 0, 0], "2413": [3, 6, 15], "2431": [0, 1, 2],
                 "3412": [0, 2, 4], "4231": [0, 0, 2]}
     for pattern, coefficients in slopes.items():
