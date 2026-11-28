@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Answered Verkama’s question about the vertex connectivity of a uniform random inversion graph. It equals the minimum degree with high probability, and the probability of failure is asymptotic to $1/n$. [Proof](results/random-inversion-connectivity/PROOF.md) · [Sharp rate](results/random-inversion-connectivity/EXCEPTIONS.md) · [Independent reviews](results/random-inversion-connectivity/AUDIT.md)
+
 - Proved Meng’s base inequality at every defect and classified equality. A quadratic lower bound for the inversions of reduced 1324-avoiders covers all long skeletons. Two independent searches check the finite remainder. [Proof](results/residual-base-inequality/PROOF.md) · [Review and formal scope](results/residual-base-inequality/AUDIT.md)
 
 - Classified every pattern preserved by the prioritized Linusson–Verkama injection, proved the authors’ singleton search window sufficient and sharp, and gave a polynomial decision procedure for every finite restriction set. The proof corrects a boundary-priority step in a published witness construction. The accompanying audit records the earlier Schröder recurrence that settles the separate all-length Problem 8.1. [Result](results/inversion-compatibility/README.md) · [Independent review](results/inversion-compatibility/AUDIT.md)

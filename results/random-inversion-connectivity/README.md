@@ -1,0 +1,7 @@
+# Vertex connectivity of a random inversion graph
+
+For a uniformly random permutation of $[n]$, the probability that its inversion graph has vertex connectivity strictly below its minimum degree is asymptotic to $1/n$. In particular the parameters agree with probability tending to one, answering the question in §6 of Emil Verkama’s paper. Dividing connectivity by $\sqrt n$ gives a Rayleigh limit with tail $e^{-x^2}$. [Verkama’s question](https://arxiv.org/html/2611.17237v1#S6) · [Earlier Rayleigh limit for minimum degree](https://arxiv.org/abs/1503.03582)
+
+A minimum cut can be drawn as a line between a position threshold and a value threshold. A cut smaller than the minimum degree must enclose a cluster of nearby permutation points in a diagonal corner. To first order the cluster is an adjacent descending pair of consecutive values. [Proof of equality with high probability](PROOF.md) · [Sharp probability of failure](EXCEPTIONS.md) · [Prior work and independent reviews](AUDIT.md)
+
+Lean checks the scanline reduction for actual graph paths, the distance bound within a corner, the two-point obstruction, and the implication from singleton-sided scanlines to equality of the graph parameters. The probability estimates and the Rayleigh transfer have written proofs. An independent exhaustive check compares scanlines to all separating sets through length eight. [Lean development](../../lean/SolvedMath/RandomInversionConnectivity.lean) · [Exact checker](verify.py)

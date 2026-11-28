@@ -361,3 +361,19 @@ open SolvedMath.PatternSeparator
 /-- info: 'ResidualBase.meng_base_of_short_census' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms ResidualBase.meng_base_of_short_census
+
+/-- info: 'RandomInversionConnectivity.separator_has_scanline' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.separator_has_scanline
+
+/-- info: 'RandomInversionConnectivity.corner_distance' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.corner_distance
+
+/-- info: 'RandomInversionConnectivity.strict_two_point_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.strict_two_point_rectangle
+
+/-- info: 'RandomInversionConnectivity.equality_of_singleton_scans' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.equality_of_singleton_scans
