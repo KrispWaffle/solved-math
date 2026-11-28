@@ -25,3 +25,4 @@ lake env bash -eu -c '
 ' _ "$objects" "$topic"
 python3 "$topic/check.py"
 python3 "$topic/check_extremes.py"
+python3 "$topic/check_reciprocal.py"
