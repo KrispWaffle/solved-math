@@ -133,3 +133,39 @@ open SolvedMath.PatternSeparator
 /-- info: 'DistinctPermutationPatterns.mean_displacementCount' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms DistinctPermutationPatterns.mean_displacementCount
+
+/-- info: 'DerangementSpectrum.directSum_derangement_iff' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.directSum_derangement_iff
+
+/-- info: 'DerangementSpectrum.skewSum_derangement_iff' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.skewSum_derangement_iff
+
+/-- info: 'DerangementSpectrum.skewSum_sumIndecomposable' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.skewSum_sumIndecomposable
+
+/-- info: 'DerangementSpectrum.directSum_first_cut' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.directSum_first_cut
+
+/-- info: 'DerangementSpectrum.directSum_injective' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.directSum_injective
+
+/-- info: 'DerangementSpectrum.cyclic_counts' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.cyclic_counts
+
+/-- info: 'DerangementSpectrum.zero_attained' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.zero_attained
+
+/-- info: 'DerangementSpectrum.one_attained' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.one_attained
+
+/-- info: 'DerangementSpectrum.attained_values_of_finite_decorations' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.attained_values_of_finite_decorations

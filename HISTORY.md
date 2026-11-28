@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Determined all attainable limiting derangement proportions in hereditary permutation classes. Every real number in the unit interval occurs, even with the growth rate restricted to $[5/2,13/5]$. The complete proof was independently reviewed. Lean verifies the endpoint classes, direct and skew sums, and interpolation from two explicit estimates. [Result](results/derangement-limit-spectrum/README.md) · [Audit](results/derangement-limit-spectrum/AUDIT.md)
+
 - Proved a uniform limiting law for the distinct counts at all nonempty pattern lengths of a random permutation. It determines the covariance between different lengths and rules out Poisson approximation at interior densities. The scaled loss after sublinear deletions converges to the bond count. Lean checks the first moment for each plot displacement. [Joint profile](results/distinct-random-permutation-patterns/UNIFORM-PROFILE.md) · [Edge limits](results/distinct-random-permutation-patterns/EDGE-LENGTHS.md)
 - Determined the exact mean limit, limiting distribution and asymptotic variance of the number of distinct classical patterns in a uniform random permutation. The written proof was independently reviewed. Lean checks the source counting identity, elementary replacement and the analytic implication for the mean. [Result](results/distinct-random-permutation-patterns/README.md) · [Audit](results/distinct-random-permutation-patterns/AUDIT.md)
 
