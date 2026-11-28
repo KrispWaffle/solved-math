@@ -8,6 +8,8 @@ The present approach looks near the *maximum* inversion count. Complement sends 
 
 ## Findings
 
+At the low-inversion end, the conjecture holds eventually throughout every range `k = o(n² / log² n)`, including every power below two. The proof removes small dominating sets until an isolated vertex splits the remaining permutation into two partition-encoded classes. [Sparse-range theorem](SPARSE-INVERSIONS.md)
+
 For every sufficiently large $n$ the conjectured count increases by an exponential factor whenever the inversion deficit $\binom n2-k$ is at most $3n$. More generally the proof gives an exact entropy criterion for any fixed linear strip in a sum-closed complement class. For 4231, a finite weighted block strictly extends the interval supplied by the unrestricted Lehmer bound. The intervening inversion counts and the full finite-length conjecture remain open. [Upper-edge proof](UPPER-EDGE.md) · [Exact strip rate and weighted criterion](ENTROPY.md)
 
 Lean verifies the original fixed-$k$ inequality with an explicit exponential factor for every $n\ge1024$ and $64(\binom n2-k)\le n$. The underlying theorem applies to every family containing the reversals of all layered permutations. The wider entropy range has a written proof. [Finite proof and scope](FINITE-STRIP.md) · [Source declaration](PrincipalStrip.lean) · [Axiom audit](ProofAudit.lean) · [Local verifier](verify.sh)
@@ -21,3 +23,7 @@ A second reviewer checked the original quantifiers, the tagged rank encoding, th
 ## Growing prefix restrictions
 
 For the family in CLUV Conjecture 4.5, every fixed linear upper strip satisfies the exponential comparison uniformly while the restricted suffix occupies any fixed positive fraction of the positions. The prefix index can grow linearly with $n$. The proof uses the inversion weight of a value shuffle across one cut and a strict entropy estimate for bounded-area Dyck paths. An independent reviewer checked the argument and the exact entropy at the unrestricted endpoint. This result currently has a written proof. [Theorem and argument](CATALAN-PREFIX.md)
+
+Meng’s companion manuscript treats the two ends of the spectrum at fixed complementary deficits. The upper-edge entropy result above allows the deficit to grow linearly with length. [Author’s source](https://github.com/lsmeng/1324-inversion-monotonicity/blob/c818d55a88489ae8e6e5e2b4a030742492e1c699/papers/two_ends.tex)
+
+Two independent mathematical reviewers checked the sparse-range proof against Meng’s injection complement and the source graph hypotheses on 28 November 2026. One derived the reduction by deleting bounded neighborhoods of low-degree vertices. The other found the dominating-set iteration, which the first then checked independently. They checked the two staircase lengths, the early-isolate exception, the termination bound from an intermediate round, and uniform domination of the encoding cost. The same proof gives the relative asymptotic $a(n,k)/p_2(k)\to1$ in this range. The full sparse-range result currently has a written proof. [Proof and asymptotic](SPARSE-INVERSIONS.md)
