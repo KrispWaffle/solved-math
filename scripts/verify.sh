@@ -26,6 +26,9 @@ cd "$(dirname "$0")/.."
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Finite.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Combinatorics/SimpleGraph/Maps.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Combinatorics/SimpleGraph/Connectivity/Connected.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Combinatorics/SimpleGraph/Connectivity/Subgraph.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/WellFoundedSet.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/NodupEquivFin.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/WellQuasiOrder.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Instances/AddCircle/DenseSubgroup.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Real/Cardinality.olean ||
@@ -50,6 +53,8 @@ cd "$(dirname "$0")/.."
       Mathlib.Analysis.SpecificLimits.Normed Mathlib.Algebra.Order.Floor.Ring \
       Mathlib.Data.List.Permutation Mathlib.Data.List.Sublists Mathlib.SetTheory.Cardinal.Finite \
       Mathlib.Combinatorics.SimpleGraph.Maps Mathlib.Computability.TuringMachine.PostTuringMachine \
+      Mathlib.Combinatorics.SimpleGraph.Connectivity.Subgraph Mathlib.Order.WellFoundedSet \
+      Mathlib.Data.List.NodupEquivFin Mathlib.Topology.Instances.Real.Lemmas \
       Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected Mathlib.Order.WellQuasiOrder \
       Mathlib.Topology.Instances.AddCircle.DenseSubgroup Mathlib.Analysis.Real.Cardinality \
       Mathlib.Data.Fintype.BigOperators Mathlib.Algebra.Order.BigOperators.Group.Finset

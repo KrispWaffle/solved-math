@@ -53,3 +53,7 @@ The paper’s journal and preprint versions assign different meanings to hardnes
 ## 28 November 2026 — Induced minors of bipartite permutation graphs
 
 The earlier nested lozenges have a two-vertex-wide middle, but their pendant markers create an asteroidal triple. To keep a permutation representation, the new construction marks two rows by adding a third independent twin to each. An attempted contraction separating the members of an internal row would force all their common neighbors through a host row too small to hold them. This gives a recognition criterion for a whole family of path blowups. [Argument](../results/bipartite-permutation-induced-minors/PROOF.md) · [Comparison with earlier antichains](../results/bipartite-permutation-induced-minors/AUDIT.md)
+
+## 28 November 2026 — Unit interval graphs under induced minors
+
+The bipartite permutation antichain uses independent vertices in each row. In a unit interval representation, the intervals at each cut form a clique, and their start order is also their end order. This allows a different conclusion. Coloring chronological ranks gives connected sets through dense stretches. The same colors identify the ports on the two sides of an omitted stretch in the ordering argument. [Proof](../results/unit-interval-induced-minors/PROOF.md) · [Audit and formal scope](../results/unit-interval-induced-minors/AUDIT.md)

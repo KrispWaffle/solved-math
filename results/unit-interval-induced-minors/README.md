@@ -1,0 +1,7 @@
+# Induced minors of unit interval graphs
+
+Every infinite sequence of finite unit interval graphs contains two graphs, in sequence order, such that the earlier one is an induced minor of the later one. The argument covers unbounded clique number and disconnected graphs. It settles the unit interval part of Lozin and Mayhill’s conjecture. Their bipartite permutation graph question has a negative answer. [Source and scope](AUDIT.md) · [Companion result](../bipartite-permutation-induced-minors/README.md)
+
+The proof uses the order in which unit intervals start and end. Where many intervals cover every point, cyclically coloring them gives disjoint connected branches for any prescribed interval graph. Between two cuts of smaller coverage, those colors let the branches pass across skipped pieces. Two independent mathematical reviewers checked the resulting induction. [Written proof](PROOF.md) · [Review](AUDIT.md)
+
+Lean verifies the dense-region theorem, a universal unit interval host for arbitrary interval graphs, the finite-label bounded-span ordering theorem and the gluing rule for two induced-minor models. The descent through all separator sizes is proved in the manuscript. [Source statement and reduction](../../lean/SolvedMath/UnitIntervalQuestion.lean) · [Dense regions](../../lean/SolvedMath/UnitIntervalDensity.lean) · [Gluing](../../lean/SolvedMath/UnitIntervalGlue.lean) · [Bounded spans](../../lean/SolvedMath/UnitIntervalWords.lean) · [Direct verifier](verify.py)

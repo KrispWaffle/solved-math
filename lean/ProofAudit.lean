@@ -493,3 +493,31 @@ open SolvedMath.PatternSeparator
 /-- info: 'InducedMinorBands.bipartite_permutation_not_wqo' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms InducedMinorBands.bipartite_permutation_not_wqo
+
+/-- info: 'UnitIntervalMinors.cyclic_cover' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.cyclic_cover
+
+/-- info: 'UnitIntervalMinors.long_dense_segment' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.long_dense_segment
+
+/-- info: 'UnitIntervalMinors.interval_graph_in_unit_grid' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.interval_graph_in_unit_grid
+
+/-- info: 'UnitIntervalMinors.SlabModel.join' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.SlabModel.join
+
+/-- info: 'UnitIntervalMinors.BoundedDrawing.wellQuasiOrdered' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.BoundedDrawing.wellQuasiOrdered
+
+/-- info: 'UnitIntervalMinors.sparse_of_omits' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.sparse_of_omits
+
+/-- info: 'UnitIntervalMinors.question_of_sparse_classes' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms UnitIntervalMinors.question_of_sparse_classes
