@@ -1,0 +1,7 @@
+# Induced minors of bipartite permutation graphs
+
+**Bipartite permutation graphs are not well-quasi-ordered by induced minors.** This answers Alecu, Lozin and Malyshev’s Open Problem 2. Take a path, replace each vertex by two independent twins, and add a third twin at the second and penultimate positions. Any induced-minor model between two of these graphs preserves the distance between the two enlarged rows. The resulting infinite antichain has maximum degree five and bandwidth at most four. [Journal question](https://doi.org/10.1002/jgt.23011) · [Written proof](PROOF.md)
+
+Lean proves the full negative answer using actual permutation orders and disjoint connected branch sets that preserve exactly the adjacencies of the target. The formalization allows all finite bipartite permutation graphs and places no condition on the graphs arising during contractions. [Antichain theorem](../../lean/SolvedMath/InducedMinorAntichain.lean) · [Permutation representation](../../lean/SolvedMath/InducedMinorBands.lean) · [General row rigidity](../../lean/SolvedMath/InducedMinorRows.lean)
+
+For a larger family of path blowups with row sizes between $s$ and $2s-1$ and outside rows of size $s$, the written proof characterizes all induced-minor comparisons by a contiguous block of row sizes. It also distinguishes the earlier nested-lozenge antichain and the separate question about ordinary unit interval graphs. [Proof and scope](PROOF.md) · [Sources and independent reviews](AUDIT.md) · [Direct deletion and contraction checks](verify.py)

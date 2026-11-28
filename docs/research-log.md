@@ -49,3 +49,7 @@ Coupling all subset sizes by the initial segments of one random ordering gives a
 ## 28 November 2026 — Folded linear forests
 
 The paper’s journal and preprint versions assign different meanings to hardness. For the journal version, a minimal hereditary hard class must equal the hereditary hull of the output of some SAT reduction. The degree test on the binary fold made the irrational slope recoverable from long paths and supplied too many different classes for this to hold universally. A second argument diagonalizes among finite slope intervals to obtain a decidable example. [Proof](../results/folded-linear-forests/PROOF.md) · [Prior work and review](../results/folded-linear-forests/AUDIT.md)
+
+## 28 November 2026 — Induced minors of bipartite permutation graphs
+
+The earlier nested lozenges have a two-vertex-wide middle, but their pendant markers create an asteroidal triple. To keep a permutation representation, the new construction marks two rows by adding a third independent twin to each. An attempted contraction separating the members of an internal row would force all their common neighbors through a host row too small to hold them. This gives a recognition criterion for a whole family of path blowups. [Argument](../results/bipartite-permutation-induced-minors/PROOF.md) · [Comparison with earlier antichains](../results/bipartite-permutation-induced-minors/AUDIT.md)

@@ -2,6 +2,7 @@
 
 ## November 28, 2026
 
+- Answered the bipartite permutation induced-minor question by an infinite antichain of bandwidth four and maximum degree five. Lean proves preservation of the gap between the marked rows. [Proof](results/bipartite-permutation-induced-minors/PROOF.md) · [Formal theorem](lean/SolvedMath/InducedMinorAntichain.lean)
 - Disproved the journal conjecture on minimal hardness for folded linear forests in Lean. A separate reviewed construction gives a computable counterexample and polynomial-time solvability on every proper hereditary subclass. [Proof](results/folded-linear-forests/PROOF.md) · [Lean theorem](lean/SolvedMath/FoldedMinimalHardness.lean)
 - Disproved Alecu, Lozin and Malyshev’s proposed classification for induced subgraph isomorphism. The new reduction gives NP-completeness whenever the forbidden path has six or more vertices, completing the dichotomy with their positive result. [Proof](results/bipartite-induced-isomorphism/PROOF.md) · [Review](results/bipartite-induced-isomorphism/AUDIT.md)
 

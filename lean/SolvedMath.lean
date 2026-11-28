@@ -13,3 +13,4 @@ import SolvedMath.RandomInversionProbability
 import SolvedMath.StarForestPacking
 import SolvedMath.InducedIsomorphismStatement
 import SolvedMath.FoldedMinimalHardness
+import SolvedMath.InducedMinorAntichain

@@ -473,3 +473,23 @@ open SolvedMath.PatternSeparator
 /-- info: 'FoldedLinearForests.journal_conjecture_three_false' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms FoldedLinearForests.journal_conjecture_three_false
+
+/-- info: 'InducedMinorBands.Model.common_neighbors_force_row' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InducedMinorBands.Model.common_neighbors_force_row
+
+/-- info: 'InducedMinorBands.example_bipartite_permutation' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InducedMinorBands.example_bipartite_permutation
+
+/-- info: 'InducedMinorBands.Model.gap_preserved' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InducedMinorBands.Model.gap_preserved
+
+/-- info: 'InducedMinorBands.antichain' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InducedMinorBands.antichain
+
+/-- info: 'InducedMinorBands.bipartite_permutation_not_wqo' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InducedMinorBands.bipartite_permutation_not_wqo
