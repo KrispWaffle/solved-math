@@ -377,3 +377,19 @@ open SolvedMath.PatternSeparator
 /-- info: 'RandomInversionConnectivity.equality_of_singleton_scans' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms RandomInversionConnectivity.equality_of_singleton_scans
+
+/-- info: 'RandomInversionConnectivity.hit_variance' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.hit_variance
+
+/-- info: 'RandomInversionConnectivity.equality_of_safe_corners' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.equality_of_safe_corners
+
+/-- info: 'RandomInversionConnectivity.error_eventually' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.error_eventually
+
+/-- info: 'RandomInversionConnectivity.verkama_connectivity' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms RandomInversionConnectivity.verkama_connectivity

@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Completed the Lean proof that vertex connectivity equals minimum degree with probability tending to one for uniform random permutations. The proof counts rectangle hits over the exact finite sample space. [Checked theorem](lean/SolvedMath/RandomInversionProbability.lean) · [Formal scope and review](results/random-inversion-connectivity/AUDIT.md)
+
 - Answered Verkama’s question about the vertex connectivity of a uniform random inversion graph. It equals the minimum degree with high probability, and the probability of failure is asymptotic to $1/n$. [Proof](results/random-inversion-connectivity/PROOF.md) · [Sharp rate](results/random-inversion-connectivity/EXCEPTIONS.md) · [Independent reviews](results/random-inversion-connectivity/AUDIT.md)
 
 - Proved Meng’s base inequality at every defect and classified equality. A quadratic lower bound for the inversions of reduced 1324-avoiders covers all long skeletons. Two independent searches check the finite remainder. [Proof](results/residual-base-inequality/PROOF.md) · [Review and formal scope](results/residual-base-inequality/AUDIT.md)
