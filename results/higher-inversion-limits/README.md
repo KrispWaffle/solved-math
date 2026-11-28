@@ -12,7 +12,7 @@ For a single additional pattern of length four, the classification is as follows
 | 2143, 2413, 2431, 3412, 4231 | One further difference stabilizes on every diagonal. In each of these five classes the first difference grows or decreases linearly on at least one diagonal. |
 | 1234 | The counts themselves eventually vanish on each diagonal. |
 
-For example, with partner 2143 the first difference eventually decreases by exactly two at each step on $k=n-1$. With partner 2413 it increases by three on that same diagonal. The proof gives a coefficient formula for all of these slopes. The explicit secondary sequence for 1342 was already known. [Classification and slope formula](CLASSIFICATION.md) · [Prior formula, Theorem 7.14](https://arxiv.org/html/2604.01143v2#S7)
+For example, with partner 2143 the first difference eventually decreases by exactly two at each step on $k=n-1$. With partner 2413 it increases by three on that same diagonal. The proof gives a coefficient formula for all of these slopes. The explicit secondary sequence for 1342 was already known. [Classification and slope formula](CLASSIFICATION.md) · [Prior formula, Theorem 7.14 in the PDF](https://arxiv.org/pdf/2604.01143v2#page=35)
 
 Both written proofs received independent mathematical review. Lean checks the end-component excess bound, the count of two free interval lengths, the six pattern certificates and the fifteen displayed slope coefficients. The passage from an arbitrary source permutation to the finite interval families uses the written proof and Linusson and Verkama’s structural theorem. [Lean declarations and scope](../../docs/lean-status.md) · [Audit](AUDIT.md) · [Independent structural input](https://arxiv.org/abs/2408.15075)
 
