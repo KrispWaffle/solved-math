@@ -12,7 +12,7 @@ lake env bash -eu -c '
   export LEAN_PATH="$1:$LEAN_PATH"
   for module in SliceCurvature RankTransfer; do
     lean -DwarningAsError=true --root="$2" -o "$1/$module.olean" "$2/$module.lean"
+    leanchecker --fresh --verbose "$module"
   done
-  leanchecker --fresh --verbose SliceCurvature RankTransfer
 ' _ "$objects" "$topic"
 python3 "$topic/check.py"
