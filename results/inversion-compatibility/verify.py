@@ -120,6 +120,14 @@ def main():
                 assert grown not in images
                 images.add(grown)
                 domain += 1
+    # A second restriction excludes the singleton constructor's input. Exercise the finite-basis search.
+    p, blocker = (2, 4, 1, 3), (3, 2, 1)
+    assert blocker in literal_patterns(singleton_witness(p), 3)
+    alternative, grown, newly_present = find_witness((p, blocker))
+    assert newly_present == p and image(alternative) == grown
+    assert p not in literal_patterns(alternative, 4) and blocker not in literal_patterns(alternative, 3)
+    assert p in literal_patterns(grown, 4)
+    assert find_witness(((1, 2, 4, 3), (1, 2))) is None
     long_identity = tuple(range(1, 1201))
     long_text = StructuredText.parse(long_identity)
     assert long_text.contains(long_identity) and not long_text.contains((2, 1))

@@ -12,7 +12,7 @@ Let $h=|p|$. A pattern containing 1324 is compatible, since the whole image avoi
    - $c(a)\ge3$.
    - $a=A\oplus T$ has exactly two components and $T$ starts below its maximum.
    - $a=T$ is indecomposable, avoids 213, and starts below its maximum.
-4. In any remaining orientation, $c(a)>c(q)$, or $r>1$ and $q$ has two components with its first component starting at its maximum, or $1<r<h$ and $a$ avoids 213.
+4. In at least one remaining indexed orientation, $c(a)>c(q)$, or $r>1$ and $q$ has two components with its first component starting at its maximum, or $1<r<h$ and $a$ avoids 213.
 
 The tests refer only to the given pattern. Direct cuts and the four orientations use elementary scans. For 1324, scan inversion pairs and test for a smaller point on the left and a larger point on the right using prefix minima and suffix maxima. For 213, a prior inversion and a sufficiently large suffix maximum suffice. The entire test takes quadratic time and linear auxiliary space. None of the tests requires listing possible input hosts. [Executable criterion](decision.py)
 

@@ -319,8 +319,11 @@ def find_witness(basis):
         single = singleton_witness(pattern)
         if single is None:
             continue
+        if len(basis) == 1:
+            return single, image(single), pattern
         # The direct singleton certificate can also satisfy all the other restrictions.
         text = StructuredText.parse(single)
+        assert text is not None
         if all(not text.contains(p) for p in basis):
             return single, image(single), pattern
         witness = witness_for(pattern, basis)
