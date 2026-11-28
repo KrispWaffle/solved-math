@@ -101,3 +101,19 @@ open SolvedMath.PatternSeparator
 /-- info: 'PeriodicTableaux.dal_zovo_zigzag_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms PeriodicTableaux.dal_zovo_zigzag_recurrence
+
+/-- info: 'DistinctPermutationPatterns.normalizedMean_by_occurrences' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.normalizedMean_by_occurrences
+
+/-- info: 'DistinctPermutationPatterns.local_swap_pattern' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.local_swap_pattern
+
+/-- info: 'DistinctPermutationPatterns.half_weight_from_binomial_moments' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.half_weight_from_binomial_moments
+
+/-- info: 'DistinctPermutationPatterns.source_limit_from_embedding_estimates' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.source_limit_from_embedding_estimates

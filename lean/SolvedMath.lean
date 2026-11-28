@@ -3,3 +3,4 @@ import SolvedMath.SeparatorClassification
 import SolvedMath.ClusterFigure
 import SolvedMath.TableauRecurrence
 import SolvedMath.StripCoordinates
+import SolvedMath.RandomPatternMoments

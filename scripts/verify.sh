@@ -8,7 +8,8 @@ fi
 cd "$(dirname "$0")/.."
 (
   cd lean
-  if [[ ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/Pi.olean ||
+  if [[ ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/SpecialFunctions/Exponential.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/Pi.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Probability/Moments/SubGaussian.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Charpoly/Basic.olean ]]; then
     lake exe cache get Mathlib.Analysis.SpecialFunctions.Pow.Real Mathlib.Data.Fintype.Card \
@@ -22,7 +23,9 @@ cd "$(dirname "$0")/.."
       Mathlib.Tactic.Linarith Mathlib.Tactic.Positivity Mathlib.Tactic.Ring \
       Mathlib.LinearAlgebra.Charpoly.Basic Mathlib.Algebra.LinearRecurrence \
       Mathlib.Data.Int.Interval Mathlib.Analysis.Complex.Basic Mathlib.Data.List.OfFn \
-      Mathlib.Data.Fintype.Perm Mathlib.Algebra.BigOperators.Fin
+      Mathlib.Data.Fintype.Perm Mathlib.Algebra.BigOperators.Fin \
+      Mathlib.Data.Finset.Sort Mathlib.Data.Finset.Powerset Mathlib.Algebra.BigOperators.Field \
+      Mathlib.Analysis.SpecialFunctions.Exponential
   fi
   lake build
   lake env leanchecker --fresh --verbose SolvedMath

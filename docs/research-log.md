@@ -39,3 +39,7 @@ Each rank in one window generates a final rank interval in the next. Compatibili
 ## 27 November 2026 — Lee–Sah height conjecture
 
 While working on the overlap-one packing moment problem, I compared each window’s weight with beta factors at all its intermediate spine points. Lee and Sah’s Theorem 1.4 already gives the resulting exponential growth rate for the counts. The same comparison controls rare events and resolves the separate height conjecture at the end of their paper. The clean estimate comes from leaving the first point uniform, sorting the other points under the beta law, and bounding the lost mass by a polynomial in the chain length. [Proof](../results/lee-sah-cluster-height/PROOF.md) · [Prior work and independent review](../results/lee-sah-cluster-height/AUDIT.md)
+
+## 28 November 2026 — Distinct patterns in a random permutation
+
+Conditioning on one subset turns repeated patterns into partial bijections preserving two independent orders. Decomposing a bijection into paths shows that every typical repetition comes from local replacements. Short pairs in the permutation plot then give the fluctuation law. The earlier near-perfect-packing conjecture had already been disproved. The new results answer the subsequent exact-mean and limit-law questions. [Mean proof](../results/distinct-random-permutation-patterns/PROOF.md) · [Prior work and review](../results/distinct-random-permutation-patterns/AUDIT.md)

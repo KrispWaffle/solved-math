@@ -1,5 +1,9 @@
 # History
 
+## November 28, 2026
+
+- Determined the exact mean limit, limiting distribution and asymptotic variance of the number of distinct classical patterns in a uniform random permutation. The written proof was independently reviewed. Lean checks the source counting identity, elementary replacement and the analytic implication for the mean. [Result](results/distinct-random-permutation-patterns/README.md) · [Audit](results/distinct-random-permutation-patterns/AUDIT.md)
+
 ## November 27, 2026
 
 - Answered Dal Zovo’s recurrence question for generalized shifted tableaux. The formal proof counts the source words, establishes one recurrence per width and excess, and distinguishes the literal-coordinate obstruction from the intended convention. Independently reviewed written proofs give the growth by excess regime. [Problem](results/periodic-set-valued-tableaux/README.md) · [Audit](results/periodic-set-valued-tableaux/AUDIT.md)
