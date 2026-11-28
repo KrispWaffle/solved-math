@@ -10,6 +10,10 @@ q\,e(P)\ \ge\ n\,e(P-x).
 
 If $q=n$, every listing of $P-x$ leaves exactly one slot for $x$, giving $e(P)=e(P-x)$. Otherwise $n\ge2$, $q\le n-1$, and $\rho(P,x)\ge n/(n-1)$. These alternatives hold for arbitrary distinguished elements.
 
+## Deduction from prior promotion results
+
+For a listing $f$, let $\Phi(f)$ be its promotion chain. The promotion-chain identity counts $e(P-x)$ by the listings with $x\in\Phi(f)$. For each rank $i$, partial promotion on the first $i$ positions is a bijection on listings. The letter occupying rank $i$ after partial promotion is the last member of $\Phi(f)$ whose old rank is at most $i$. If $x\in\Phi(f)$, all these letters compare to $x$. Sum the indicator over $i$ and all listings. By bijectivity at each $i$, the sum of the comparability indicators is $q e(P)$, and listings with $x$ on the chain contribute $n e(P-x)$. This is the independent reviewer's deduction from the two published properties. [Promotion-chain identity, Lemma 8.1](https://arxiv.org/pdf/2205.02798#page=28) · [Partial promotion, §14.2](https://arxiv.org/pdf/2311.02743)
+
 ## A direct injection
 
 Insert $x$ at any of the $n$ positions of any extension of $P-x$, temporarily ignoring the relations involving $x$. In the resulting word mark the $q$ positions occupied by elements comparable to $x$, including the position of $x$. Record the index of $x$ among the marked positions. Keeping the marked positions themselves fixed, move $x$ within their subsequence until every predecessor precedes it and every successor follows it. All the other marked letters retain their mutual order. This specifies a unique rearrangement since every predecessor of $x$ precedes every successor in the original extension of $P-x$.
