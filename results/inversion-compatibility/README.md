@@ -6,7 +6,7 @@ A pattern $p$ is *compatible* if growing any decomposable or almost decomposable
 
 **Compatibility of every explicitly given finite set of forbidden patterns is decidable in polynomial time.** If a forbidden $p$ appears in an image, some input avoiding the whole set has length at most $|p|+18$ and already contains $p$ with at most two points deleted. The algorithm can therefore search polynomially many extensions of subpatterns of $p$. The exponent of this general search is large. [Compression and algorithm proof](PROOF.md)
 
-The results determine which restrictions inherit the source injection's monotonicity bound for $k\le2n-7$ directly by compatibility. The paper's separately numbered Problem 8.1 asks for monotonicity at **all** lengths and inversion counts for some four-letter partner. That question remains open. [Original problem](https://arxiv.org/pdf/2604.01143v2#page=36)
+The results determine which restrictions inherit the source injection's monotonicity bound for $k\le2n-7$ directly by compatibility. The paper's separately numbered Problem 8.1 asks for monotonicity at **all** lengths and inversion counts for some four-letter partner. For the partner 1342 that stronger assertion already follows from a published Schröder-polynomial recurrence. [Prior result and derivation](AUDIT.md#the-separate-all-length-question) [Original problem](https://arxiv.org/pdf/2604.01143v2#page=36)
 
 ## Verification
 
