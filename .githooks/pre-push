@@ -2,6 +2,7 @@
 set -euo pipefail
 
 worktree=$(git rev-parse --show-toplevel)
+mapfile -t git_env < <(git rev-parse --local-env-vars)
 snapshots=$(mktemp -d)
 trap 'rm -rf -- "$snapshots"' EXIT
 
@@ -23,5 +24,10 @@ while read -r local_ref oid remote_ref _; do
     ln -s "$worktree/lean/.lake/packages" "$snapshot/lean/.lake/packages"
   fi
   printf 'Verifying %s at %.12s locally\n' "$remote_ref" "$commit" >&2
-  (cd "$snapshot" && ./scripts/verify.sh) </dev/null
+  (
+    # Lake runs Git in its own package repositories, including from linked worktrees.
+    unset "${git_env[@]}"
+    cd "$snapshot"
+    ./scripts/verify.sh
+  ) </dev/null
 done
