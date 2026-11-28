@@ -261,3 +261,43 @@ open SolvedMath.PatternSeparator
 /-- info: 'StableInversions.MarkedPartition.stable_1243_partition_formula' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms StableInversions.MarkedPartition.stable_1243_partition_formula
+
+/-- info: 'HigherInversionLimits.occursB_iff' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.occursB_iff
+
+/-- info: 'HigherInversionLimits.two_interval_slope' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.two_interval_slope
+
+/-- info: 'HigherInversionLimits.maximum_split_excess' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.maximum_split_excess
+
+/-- info: 'HigherInversionLimits.maximum_split_large' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.maximum_split_large
+
+/-- info: 'HigherInversionLimits.Certificate.six_partner_certificate' depends on axioms: [propext] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Certificate.six_partner_certificate
+
+/-- info: 'HigherInversionLimits.Certificate.arbitrary_cores_agree' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Certificate.arbitrary_cores_agree
+
+/-- info: 'HigherInversionLimits.Certificate.five_slope_rows' depends on axioms: [propext] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.Certificate.five_slope_rows
+
+/-- info: 'HigherInversionLimits.secondary_coefficients_zero' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.secondary_coefficients_zero
+
+/-- info: 'HigherInversionLimits.tertiary_coefficients' depends on axioms: [propext] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.tertiary_coefficients
+
+/-- info: 'HigherInversionLimits.problem84_of_template_formula' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms HigherInversionLimits.problem84_of_template_formula

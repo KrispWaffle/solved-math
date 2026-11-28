@@ -6,3 +6,4 @@ import SolvedMath.StripCoordinates
 import SolvedMath.RandomPatternDisplacements
 import SolvedMath.DerangementGrowth
 import SolvedMath.StableInversionPartitions
+import SolvedMath.HigherInversionClassification
