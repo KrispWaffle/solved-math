@@ -8,3 +8,4 @@ import SolvedMath.DerangementGrowth
 import SolvedMath.StableInversionPartitions
 import SolvedMath.HigherInversionSeries
 import SolvedMath.InversionCompatibility
+import SolvedMath.ResidualBase

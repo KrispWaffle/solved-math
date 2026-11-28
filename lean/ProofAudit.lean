@@ -349,3 +349,15 @@ open SolvedMath.PatternSeparator
 /-- info: 'InversionCompatibility.equal_windows_monotone' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms InversionCompatibility.equal_windows_monotone
+
+/-- info: 'ResidualBase.shell_charge' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms ResidualBase.shell_charge
+
+/-- info: 'ResidualBase.long_skeleton' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms ResidualBase.long_skeleton
+
+/-- info: 'ResidualBase.meng_base_of_short_census' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms ResidualBase.meng_base_of_short_census
