@@ -7,3 +7,4 @@ import SolvedMath.RandomPatternDisplacements
 import SolvedMath.DerangementGrowth
 import SolvedMath.StableInversionPartitions
 import SolvedMath.HigherInversionSeries
+import SolvedMath.InversionCompatibility

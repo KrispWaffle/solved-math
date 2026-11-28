@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Classified every pattern preserved by the prioritized Linusson–Verkama injection, proved the authors’ singleton search window sufficient and sharp, and gave a polynomial decision procedure for every finite restriction set. The proof corrects a boundary-priority step in a published witness construction. [Result](results/inversion-compatibility/README.md) · [Independent review](results/inversion-compatibility/AUDIT.md)
+
 - Determined all five tertiary inversion series. This proves the three predicted relations to the known primary limits, explains the negative constant for 2143, and identifies the 4231 series with two independent partitions into distinct parts. Lean checks the signed coefficient formula on the template cores at every degree. [Formulas and attribution](results/higher-inversion-limits/TERTIARY-SERIES.md) · [Independent review](results/higher-inversion-limits/AUDIT.md)
 
 - Resolved Problem 8.4 on higher inversion limits. Diagonal first differences are eventually affine for any finite additional basis over 1324. The complete classification identifies the six nontrivial secondary representatives and the five that need a tertiary difference. Each signed coefficient has an explicit template formula. [General theorem](results/higher-inversion-limits/PROOF.md) · [Classification](results/higher-inversion-limits/CLASSIFICATION.md) · [Independent audit](results/higher-inversion-limits/AUDIT.md)

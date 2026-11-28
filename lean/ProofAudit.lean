@@ -321,3 +321,31 @@ open SolvedMath.PatternSeparator
 /-- info: 'HigherInversionLimits.Series.five_tertiary_convolutions' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms HigherInversionLimits.Series.five_tertiary_convolutions
+
+/-- info: 'InversionCompatibility.oldCut_eq_newCut_add_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.oldCut_eq_newCut_add_one
+
+/-- info: 'InversionCompatibility.pivot_synchronization' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.pivot_synchronization
+
+/-- info: 'InversionCompatibility.outer_inversion' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.outer_inversion
+
+/-- info: 'InversionCompatibility.replace_maximum_of_suffix' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.replace_maximum_of_suffix
+
+/-- info: 'InversionCompatibility.incompatible_of_certificate' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.incompatible_of_certificate
+
+/-- info: 'InversionCompatibility.sharp_example_incompatible' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.sharp_example_incompatible
+
+/-- info: 'InversionCompatibility.equal_windows_monotone' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms InversionCompatibility.equal_windows_monotone
