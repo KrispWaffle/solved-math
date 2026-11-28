@@ -7,7 +7,7 @@ Let $D_m(\pi)$ be the number of distinct patterns among the $m$-subsets of posit
 \exp\left(-\frac{2(1-p)}p\right).
 ```
 
-In particular, for the total number $X_n=\sum_m D_m(\pi)$ one has $\mathbb E X_n/2^n\to e^{-2}$. This answers the exact-mean question in §4 of the source. [Original question](https://arxiv.org/html/2601.13194v1#S4) · [Withdrawal of an earlier bound](https://arxiv.org/abs/2601.13194)
+In particular, for the total number $X_n=\sum_m D_m(\pi)$ one has $\mathbb E X_n/2^n\to e^{-2}$. Biers-Ariel, Godbole and Kelley asked for the expected count in 2017. The exact leading term answers the limit question in §4 of the 2026 source. [Earlier question, §4(b)](https://arxiv.org/pdf/1704.08661#page=10) · [Original question](https://arxiv.org/html/2601.13194v1#S4) · [Withdrawal of an earlier bound](https://arxiv.org/abs/2601.13194)
 
 ## Two orders and an embedding class
 
@@ -23,7 +23,7 @@ Fokuoh’s 2018 thesis already counted same-rank single exchanges by the horizon
 
 ## Counting nonlocal bijections
 
-For a candidate bijection $\phi:S\to T$, put $b=|S\setminus T|$ and let $l$ be the number of red labels moved by $\phi$. An increasing bijection cannot have a nontrivial directed cycle: an increase or decrease at any edge would persist around the cycle. Removing the $f=m-l$ fixed points therefore leaves $b$ directed paths with $l$ edges and $l+b$ vertices altogether. Each starts at a red label outside $T$ and ends at a white label. Apart from the identity, $1\le b\le l$.
+For a candidate bijection $\phi:S\to T$, put $b=|S\setminus T|$ and let $l$ be the number of red labels moved by $\phi$. An increasing bijection cannot have a nontrivial directed cycle: an increase or decrease at any edge would persist around the cycle. Removing the $f=m-l$ fixed points therefore leaves $b$ directed paths with $l$ edges and $l+b$ vertices altogether. Each starts at a red label outside $T$ and ends at a white label. Apart from the identity, $1\le b\le l$. This is the chain graph of Bevan, Homberger and Tenner, Proposition 2.7, after deleting the labels outside both embeddings. Their Definition 2.10 also describes the horizontal and vertical strips spanned by an edge. We use these paths to bound the probability of alternative embeddings in a uniform random plot. [Chain graphs and spans](https://arxiv.org/pdf/1608.06931#page=6)
 
 For a fixed map with path lengths $l_1,\ldots,l_b$, let $q=\sum_j\lceil l_j/2\rceil$. Alternate edges of each path give $q$ vertex-disjoint directed edges. A necessary condition in one uniform order is that the tails and heads of these edges appear in matching relative orders. The two lists are independent uniform permutations, so this costs a factor $1/q!$. In particular $q\ge b$ and $q\ge l/2$.
 

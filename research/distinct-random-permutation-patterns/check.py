@@ -40,6 +40,7 @@ def check_classes(max_n):
         labels = frozenset(range(n))
         subsets = [frozenset(s) for r in range(n + 1) for s in combinations(range(n), r)]
         pair_totals = Counter()
+        ordered_pair_totals = Counter()
         for permutation in permutations(range(n)):
             classes = defaultdict(set)
             for red in subsets:
@@ -50,6 +51,7 @@ def check_classes(max_n):
                     reciprocal_sum += Fraction(1, len(group))
                     pairs = local_pairs(permutation, red, labels)
                     pair_totals[len(red)] += len(pairs)
+                    ordered_pair_totals[len(red)] += len(pairs) * (len(pairs) - 1)
                     if separated(permutation, pairs):
                         images = {red}
                         for a, b in pairs:
@@ -60,7 +62,19 @@ def check_classes(max_n):
             assert reciprocal_sum == len(classes)
         for m in range(n + 1):
             expected = Fraction(4 * m * (n - m), (m + 1) ** 2)
-            assert pair_totals[m] == expected * factorial(n) * comb(n, m)
+            instances = factorial(n) * comb(n, m)
+            assert pair_totals[m] == expected * instances
+            if m >= 1:
+                u = n - m
+                disjoint = Fraction(4 * m + 2, m * (m + 1) * (m + 2))
+                shared_red = Fraction(6, (m + 1) * (m + 2))
+                shared_white = Fraction(2, m * (m + 1))
+                expected_second = (
+                    m * (m - 1) * u * (u - 1) * disjoint**2
+                    + m * u * (u - 1) * shared_red**2
+                    + m * (m - 1) * u * shared_white**2
+                )
+                assert ordered_pair_totals[m] == expected_second * instances
     return subsets_checked
 
 
@@ -96,4 +110,4 @@ if __name__ == "__main__":
     monotone = (0, 1, 2)
     assert pattern(monotone, {0, 1}) == pattern(monotone, {1, 2})
     assert (0, 2) not in local_pairs(monotone, frozenset({0, 1}), frozenset(range(3)))
-    print(f"Checked {check_classes(6)} colored permutation instances and {check_slot_bounds()} path bounds.")
+    print(f"Checked {check_classes(6)} colored permutation instances, including both replacement moments, and {check_slot_bounds()} path bounds.")
