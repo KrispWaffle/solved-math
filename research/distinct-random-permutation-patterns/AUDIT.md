@@ -1,0 +1,23 @@
+# Review and verification
+
+## Independent mathematical review, 28 November 2026
+
+The independent Codex reviewer assigned to statement and prior-work review compared the original §4 questions with the arguments for the positive-density embedding class, exact mean, limiting distribution and variance. The reviewer identified a distinction in the first draft: replacing one red label can preserve the unlabelled pattern even when the resulting increasing bijection moves several labels. In two copies of the order $a<b<c$, with $a,b$ red, replacing $a$ by $c$ preserves pattern $12$ via $a\mapsto b\mapsto c$. The local replacement in the proof now explicitly fixes each other red. The path estimate treats cases with moving common labels separately. [Corrected definition and proof](PROOF.md) · [Original questions](https://arxiv.org/html/2601.13194v1#S4)
+
+After the correction the reviewer approved the written answers for the exact mean, positive-density classes, limiting distribution and asymptotic variance. The review checked the enumeration by directed path lengths, the conditional fixed-gap probability, the use of disjoint edges, both support-tail estimates and the factorial-moment argument. In the distribution proof it checked the separation bounds for three, four and five plot points, the product of independent color factors and the variance exponent $2/9$. The reviewer independently computed $\mathbb E X_7=47381/1260$ and $\operatorname{Var}(X_7)=101870219/1587600$ with the empty pattern included. [Limiting distribution](LIMIT-LAW.md)
+
+## Attribution and earlier results
+
+The 2026 preprint credits Féray and Godbole for upper bounds that disprove earlier near-perfect expected packing. Its second version withdraws its own lower bound and announces a correction with a fifth author. Both the author and reviewer checked the version history. The reviewer also checked all four authors' OpenAlex records, Féray's publications, the 2025 and 2026 Permutation Patterns programs, and alternative formulations including deletion decks, downsets and prolific permutations. OpenAlex listed zero citations for W7125217200 when checked on 28 November. The searches located no publicly posted exact limit or fluctuation law. A further dated search is required before publication. [Withdrawal](https://arxiv.org/abs/2601.13194) · [OpenAlex record](https://openalex.org/W7125217200)
+
+Homberger studied the effect of deleting a single position and its connection with bonds. Bevan, Homberger and Tenner characterized the permutations for which every fixed-size deletion gives a different pattern. Blackburn, Homberger and Winkler proved the Poisson limit for the number of pairs at bounded Manhattan distance. Our argument uses a marked displacement count and the typical size of an embedding class at positive density. [Homberger](https://arxiv.org/abs/1211.7117) · [Bevan, Homberger and Tenner](https://arxiv.org/abs/1608.06931) · [Blackburn, Homberger and Winkler, Theorem 5](https://arxiv.org/pdf/1706.01557#page=8)
+
+The reviewer also checked all four authors in the arXiv export API. Godbole's subsequent paper on contiguous substrings in random words addresses a different sample space. The large-support argument here also uses disjoint order-isomorphic lists, the objects studied as permutation twins. [Godbole's later paper](https://arxiv.org/abs/2609.19409) · [Bukh and Rudenko on twins](https://arxiv.org/abs/2003.00363)
+
+## Exact finite checks
+
+The checker enumerates 50,362 colored permutation instances through size six. It checks the reciprocal class identity, that every separated family of local choices produces the declared number of images of the same pattern, and the exact mean replacement count $4m(n-m)/(m+1)^2$. A separate enumeration checks the one-order probability bound for 36 directed path and fixed-vertex configurations. The monotone three-label example from review is also tested. [Executable checks](check.py)
+
+## Formal scope
+
+The reviewer checked the sorted rank list, factorial and subset normalizations, local map and occurrence-count declarations in the finite module. They elaborated it independently with Lean 4.36.0 and replayed the kernel in an isolated copy. The exact source limit is stated as `ExactMeanLimit`. The theorem `source_limit_from_embedding_estimates` derives it assuming convergence of the binomial moments of the actual number of local replacements and vanishing probability that the actual occurrence count differs from its proposed power of two. Its finite Taylor remainder permits passing to the limit without an exponential-moment assumption. The combinatorial estimates and the fluctuation law have written proofs. [Finite declarations](Finite.lean) · [Moment argument](Moments.lean)
