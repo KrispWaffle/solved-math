@@ -408,20 +408,23 @@ theorem eventual_roots_in_intervals (J : ℕ) : ∀ᶠ k : ℕ in atTop, ∀ i �
 
 /-- Uniformly over the whole row, the number of distinct negative zeros tends to infinity. -/
 theorem eventual_distinct_negative_roots (J : ℕ) : ∀ᶠ k : ℕ in atTop, ∀ i ≤ k,
-    Nonempty (Fin J ↪ {x : ℝ // x < 0 ∧ numerator k i x = 0}) := by
+    Nonempty (Fin J ↪ {x : ℝ // x ∈ Set.Ioo (-1) 0 ∧ numerator k i x = 0}) := by
   classical
-  filter_upwards [eventual_roots_in_intervals J] with k h
+  filter_upwards [eventual_roots_in_intervals J,eventually_ge_atTop 1] with k h hk
   intro i hi
   have each (m : Fin J) := h i hi (m.val+1) (mem_Icc.mpr ⟨by omega, m.isLt⟩)
   choose x hx hz using each
   have neg (m : Fin J) : x m < 0 := (hx m).2.trans (neg_lt_zero.mpr
     (pow_pos (parameters (Nat.zero_lt_succ m.val)).1 _))
+  have inside (m : Fin J) : -1 < x m := by
+    obtain ⟨pos,lt,_⟩ := parameters (Nat.zero_lt_succ (m.val+1))
+    exact (neg_lt_neg (pow_lt_one₀ pos.le lt (show power k i ≠ 0 by unfold power; omega))).trans (hx m).1
   have decreasing {a b : Fin J} (hab : a<b) : x b < x a := by
     have h' : a.val+1+1 ≤ b.val+1 := by change a.val < b.val at hab; omega
     have hpow := pow_le_pow_left₀ (parameters (Nat.zero_lt_succ (a.val+1))).1.le
       (center_strictMono.monotone h') (power k i)
     exact (hx b).2.trans_le (neg_le_neg hpow) |>.trans (hx a).1
-  refine ⟨⟨fun m => ⟨x m,neg m,hz m⟩,?_⟩⟩
+  refine ⟨⟨fun m => ⟨x m,⟨inside m,neg m⟩,hz m⟩,?_⟩⟩
   intro a b eq
   have e : x a=x b := congrArg Subtype.val eq
   rcases lt_trichotomy a b with hlt | heq | hgt
