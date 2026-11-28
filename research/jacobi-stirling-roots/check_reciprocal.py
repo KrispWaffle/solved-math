@@ -36,13 +36,17 @@ def check_series(limit, extra):
 
 
 def check_scaled_signs():
-    # Rational approximations to the saddle scales at three proportional deletion counts.
+    # Rational saddle approximations cover the endpoints, sparse deletions, and central columns.
     k = 96
     row = recurrence(k)
     checked = 0
-    for i, alpha in ((48, Fraction(2, 7)), (67, Fraction(1, 2)), (78, Fraction(2, 3))):
+    saddles = ((0, 0), (1, Fraction(1, 4)), (4, 1), (10, 3), (48, Fraction(2*k, 5)),
+               (67, k), (78, 2*k), (95, 4500), (96, None))
+    for i, r in saddles:
+        tau = Fraction(1, k) if r is None else Fraction(1+r, k*(k+r))
+        centers = [j if r is None else Fraction(j*(j+r), 1+r) for j in range(5)]
         for j in range(4):
-            u = -Fraction(2 * j + 1, 2) * alpha / k
+            u = -tau * (centers[j] + centers[j+1]) / 2
             numerator, denominator_power = 0, 1
             for d in range(max(row[i]) + 1):
                 numerator = numerator * u.numerator + row[i][d] * denominator_power

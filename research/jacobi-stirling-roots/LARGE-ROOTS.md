@@ -111,4 +111,4 @@ Cauchy's coefficient formula now divides the central-arc estimate by the Gaussia
 
 ## Verification scope
 
-The complex asymptotic and the zero count above are written proofs. The exact reciprocal identity can be checked using elementary symmetric functions against the independent word-insertion recurrence. The earlier Lean theorem concerns the roots near zero. [Source polynomial in Lean](SourcePolynomial.lean) · [Direct insertion recurrence](check.py)
+Lean proves the reciprocal series identity for every deletion count and for all nonzero real $t$ with $|t|<1$. Its numerator is the polynomial specified by the original positive-index series. The complex limit and the zero count above are written proofs. An exact checker also compares elementary symmetric functions against the independent descent-insertion recurrence. [Reciprocity in Lean](Reciprocal.lean) · [Source polynomial](SourcePolynomial.lean) · [Exact checker](check_reciprocal.py)

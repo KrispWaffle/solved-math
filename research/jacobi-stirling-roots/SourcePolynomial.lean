@@ -63,25 +63,25 @@ theorem diagonal_step (k n : ℕ) : diagonal (k+1) (n+1) =
   simpa only [histogram_coeff,map_add,PowerSeries.coeff_succ_X_mul,PowerSeries.coeff_C_mul]
     using congrArg (PowerSeries.coeff (k+1)) h
 
-private theorem diagonal_no_letters (k : ℕ) : diagonal (k+1) 0 = 0 := by
+theorem diagonal_no_letters (k : ℕ) : diagonal (k+1) 0 = 0 := by
   rw [histogram_coeff]
   simp [alphabetSeries]
 
-private theorem diagonal_empty (n : ℕ) : diagonal 0 n = 1 := by
+theorem diagonal_empty (n : ℕ) : diagonal 0 n = 1 := by
   rw [histogram_coeff,PowerSeries.coeff_zero_eq_constantCoeff]
   simp [alphabetSeries,geometric]
 
-private theorem coeff_step_zero (k n : ℕ) : coeff (k+1) 0 (n+1) =
+theorem coeff_step_zero (k n : ℕ) : coeff (k+1) 0 (n+1) =
     coeff (k+1) 0 n + (n+1)*((n+1)*coeff k 0 (n+1)) := by
   simp [coeff,diagonal_step,letter,mul_assoc,add_mul]
 
-private theorem coeff_step_succ (k i n : ℕ) : coeff (k+1) (i+1) (n+1) =
+theorem coeff_step_succ (k i n : ℕ) : coeff (k+1) (i+1) (n+1) =
     coeff (k+1) (i+1) n + (n+1)*((n+1)*coeff k (i+1) (n+1)) + (n+1)*coeff k i (n+1) := by
   simp [coeff,diagonal_step,letter,mul_assoc,add_mul,mul_add]
   ring
 
 /-- Finite nonnegative combinations of n choose j with j at most d. -/
-private inductive BinSpan (d : ℕ) : (ℕ → ℕ) → Prop
+inductive BinSpan (d : ℕ) : (ℕ → ℕ) → Prop
   | term (a j : ℕ) (h : j ≤ d) : BinSpan d (fun n : ℕ => a*n.choose j)
   | add {f g : ℕ → ℕ} : BinSpan d f → BinSpan d g → BinSpan d (fun n => f n + g n)
 
@@ -135,7 +135,7 @@ private theorem prefix_of_step {f g : ℕ → ℕ} (hf : f 0 = 0) (hg : g 0 = 0)
   | zero => simp [hf,hg]
   | succ n ih => rw [sum_range_succ,← ih,h]
 
-private theorem column_span (k i : ℕ) (hi : i ≤ k) : BinSpan (3*k-i) (coeff k i) := by
+theorem column_span (k i : ℕ) (hi : i ≤ k) : BinSpan (3*k-i) (coeff k i) := by
   induction k generalizing i with
   | zero =>
     obtain rfl : i = 0 := by omega
@@ -165,7 +165,7 @@ private theorem column_span (k i : ℕ) (hi : i ≤ k) : BinSpan (3*k-i) (coeff 
       rw [e]
       exact bin_mono (prefix_span (BinSpan.add le ri)) (by omega)
 
-private theorem choose_hasSum (j : ℕ) {t : ℝ} (ht : |t| < 1) :
+theorem choose_hasSum (j : ℕ) {t : ℝ} (ht : |t| < 1) :
     HasSum (fun n : ℕ => (n.choose j : ℝ)*t^n) (t^j/(1-t)^(j+1)) := by
   apply (hasSum_nat_add_iff' j).mp
   have zero : (∑ n ∈ range j, (n.choose j : ℝ)*t^n) = 0 := by
