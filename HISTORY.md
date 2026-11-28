@@ -2,6 +2,7 @@
 
 ## November 28, 2026
 
+- Determined the probability of every fixed connectivity gap and the conditional minimum-degree limit for uniform random permutation graphs. [Written proof](results/random-inversion-connectivity/GAPS.md)
 - Completed the Lean proof that vertex connectivity equals minimum degree with probability tending to one for uniform random permutations. The proof counts rectangle hits over the exact finite sample space. [Checked theorem](lean/SolvedMath/RandomInversionProbability.lean) · [Formal scope and review](results/random-inversion-connectivity/AUDIT.md)
 
 - Answered Verkama’s question about the vertex connectivity of a uniform random inversion graph. It equals the minimum degree with high probability, and the probability of failure is asymptotic to $1/n$. [Proof](results/random-inversion-connectivity/PROOF.md) · [Sharp rate](results/random-inversion-connectivity/EXCEPTIONS.md) · [Independent reviews](results/random-inversion-connectivity/AUDIT.md)

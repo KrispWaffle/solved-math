@@ -70,6 +70,16 @@ def check(word):
             for pos in range(i):
                 if word[pos] < j and i - pos + j - word[pos] > 2 * count:
                     raise AssertionError(("corner bound", word, pos, i, j))
+            gap = minimum - size
+            if gap > 0:
+                if count < gap + 1:
+                    raise AssertionError(("insufficient vertices behind cut", word, i, j))
+                if count == gap + 1:
+                    block = tuple(range(j - 1, j - count - 1, -1))
+                    if word[i - count:i] != block:
+                        raise AssertionError(("forced decreasing block", word, i, j, gap))
+                    if any(graph[h].bit_count() != minimum for h in range(i - count, i)):
+                        raise AssertionError(("block has wrong degree", word, i, j, gap))
             if size < minimum and count == 2:
                 if i < 2 or j < 2 or word[i-2:i] != (j-1, j-2):
                     raise AssertionError(("descending bond", word, i, j))
