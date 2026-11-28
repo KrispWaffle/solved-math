@@ -40,3 +40,4 @@ shopt -s nullglob
 for verifier in results/*/verify.py archive/*/verify.py; do
   python3 "$verifier"
 done
+bash research/principal-pattern-rank-unimodality/verify.sh
