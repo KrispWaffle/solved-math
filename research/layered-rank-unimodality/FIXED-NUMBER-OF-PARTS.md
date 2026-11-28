@@ -63,7 +63,7 @@ N-E \ \le\ 2c'=N-E+b+\sum e_i+2d \ \le\ N+b+E.
 ```
 Every remaining width $w_i-e_i-1$ is at least $u-E-1$. For $H+2\le r\le C$, inequality (3) gives $|2r-2c'|\le 2E+2k+2<u-E-2$.
 
-Use the backward difference $\nabla G_y=G_y-G_{y-1}$ for coefficients. After splitting off one large interval, the frozen box polynomial has the form $x^a[0,m](x)G(x)$ with $G$ a product of zero-based intervals of total degree $g$. Put $y=r-a$. Its second difference is
+Use the backward difference $\nabla G_y=G_y-G_{y-1}$ for coefficients. After splitting off one large interval, the frozen box polynomial has the form $x^aI_{0,m}(x)G(x)$ with $G$ a product of zero-based intervals of total degree $g$. Put $y=r-a$. Its second difference is
 ```math
 \nabla G_y-\nabla G_{y-m-1}.
 ```

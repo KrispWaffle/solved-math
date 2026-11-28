@@ -7,12 +7,13 @@ if ! command -v lake >/dev/null; then
 fi
 lake build Mathlib.Data.List.Forall2 Mathlib.Order.Interval.Finset.Nat \
   Mathlib.Algebra.BigOperators.Intervals Mathlib.Algebra.Order.BigOperators.Group.Finset \
-  Mathlib.Tactic.Ring Mathlib.Tactic.Tauto
+  Mathlib.Tactic.Ring Mathlib.Tactic.Tauto Mathlib.Tactic.LinearCombination \
+  Mathlib.Algebra.Polynomial.Basic Mathlib.Algebra.Polynomial.Coeff
 objects=$(mktemp -d)
 trap 'rm -rf -- "$objects"' EXIT
 lake env bash -eu -c '
   export LEAN_PATH="$1:$LEAN_PATH"
-  for module in GreedyBoxes BoxProfiles; do
+  for module in GreedyBoxes BoxProfiles PeakPolynomial; do
     lean -DwarningAsError=true --root="$2" -o "$1/$module.olean" "$2/$module.lean"
     leanchecker --fresh --verbose "$module"
   done

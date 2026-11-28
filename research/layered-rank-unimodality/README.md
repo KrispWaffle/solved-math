@@ -14,4 +14,6 @@ For each fixed number of parts, all sufficiently large hosts satisfy the conject
 
 For every composition, the ranks weakly decrease starting at the integer part of half the total weight plus half the number of parts minus one half. Lean proves this on the actual sets of distinct subwords and verifies the unique greedy-box representation. When all layer sizes grow in positive, strictly balanced proportions, the written proof locates the peak at this rank, with at most one tie. [Exact rank window and mode](PEAK.md) · [Greedy enumeration](GreedyBoxes.lean) · [Sharp upper tail](BoxProfiles.lean)
 
+Repeating any fixed composition sufficiently many times also gives a unimodal rank sequence. For a period containing a letter greater than one, the proof gives a Gaussian limit for the weight of a uniformly chosen distinct word and restricts every mode to the nearest integer or integers to an explicit expression. Lean checks the exact generating polynomial at every repetition. [Powers of a composition](PERIODIC-HOSTS.md) · [Formal polynomial identities](PeakPolynomial.lean)
+
 Run the local repository verifier with `./scripts/verify.sh`, or check only this topic with `bash research/layered-rank-unimodality/verify.sh`. The unrestricted conjecture remains open. [Audit and attribution](AUDIT.md)

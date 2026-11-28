@@ -12,11 +12,11 @@ A nonempty subword has a unique greedy embedding. To embed its next part, choose
 ```math
 b_h+1\le v_h\le w_{i_h},\qquad 1\le h\le q.
 ```
-Empty boxes contribute zero, and the empty support gives the empty word. This counts distinct words exactly once. Write $[a,b](x)=x^a+\cdots+x^b$ for $a\le b$ and zero otherwise. Each box contributes a product of interval polynomials. It is symmetric and unimodal about half the sum of the interval endpoints. To see this directly, the product of two symmetric consecutive strings decomposes into centered strings by (1) below. Induction gives the assertion for every box.
+Empty boxes contribute zero, and the empty support gives the empty word. This counts distinct words exactly once. Write $I_{a,b}(x)=x^a+\cdots+x^b$ for $a\le b$ and zero otherwise. Each box contributes a product of interval polynomials. It is symmetric and unimodal about half the sum of the interval endpoints. To see this directly, the product of two symmetric consecutive strings decomposes into centered strings by (1) below. Induction gives the assertion for every box.
 
 For any support of size $q$ the sum of the chosen upper endpoints and the $b_h$ is at most $N$. The gap maxima are charged to disjoint gaps among the skipped positions. Thus every box has center at most $(N+q)/2$. The full-support box and the box missing only the final position combine to give
 ```math
-P(x)=\prod_{i<k}[1,w_i](x)\,[0,w_k](x).
+P(x)=\prod_{i<k}I_{1,w_i}(x)\,I_{0,w_k}(x).
 ```
 This is centered at $c$. Every other nonempty box missing exactly one position is also centered at $c$. Indeed, the omitted position is immediately before a retained one and its whole capacity is the corresponding gap maximum. Every box omitting at least two positions is centered at or below $c-1/2$. Each summand consequently weakly decreases from $\lfloor c\rfloor$. This proves Theorem 1, including its half-integer case.
 
@@ -24,8 +24,8 @@ This is centered at $c$. Every other nonempty box missing exactly one position i
 
 Write $s_i=w_i-1$ for $i<k$, $s_k=w_k$, and $S=\sum_i s_i=N-k+1$. Removing the common monomial $x^{k-1}$ from $P$ gives a product of the strings $[0,s_i]$. The elementary identity
 ```math
-[0,a](x)[0,b](x)
-   =\sum_{j=0}^{\min(a,b)}x^j[0,a+b-2j](x) \tag{1}
+I_{0,a}(x)I_{0,b}(x)
+   =\sum_{j=0}^{\min(a,b)}x^jI_{0,a+b-2j}(x) \tag{1}
 ```
 follows by counting the pairs of degrees with a prescribed sum. A string $x^u[0,h]$ has width $h$ and center $u+h/2$. Applying (1) one factor at a time decomposes the entire product into strings centered at $c$. The multiplicity of the final width $h$ is the number of integer sequences $h_1=s_1,h_2,\ldots,h_k=h$ with
 ```math

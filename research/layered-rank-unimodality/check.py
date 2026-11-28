@@ -1,4 +1,5 @@
 """Exact coefficient checks for layered principal ideals."""
+from fractions import Fraction
 from functools import cache
 from itertools import accumulate, product
 
@@ -114,6 +115,61 @@ def check_host(host, direct):
     return len(degrees)
 
 
+def period_polynomials(v):
+    at = v.index(max(v))
+    gap = v[at+1:] + v[:at]
+    g, h = peak_polynomial(gap), peak_polynomial(v)
+    extended = peak_polynomial(gap + (max(v),))
+    q = tuple(value - coefficient(g, n) for n, value in enumerate(extended))
+    first = next(n for n, value in enumerate(q) if value)
+    assert all(value > 0 for value in q[first:])
+    return q, g, h
+
+
+def next_period(old, q, g):
+    values = convolution(q, old)
+    for i, x in enumerate(g):
+        values[i] += x
+    return values
+
+
+def check_periods():
+    transitions = 0
+    for k in range(1, 5):
+        for v in product(range(1, 5), repeat=k):
+            q, g, h = period_polynomials(v)
+            previous = h
+            for m in range(2, 5):
+                previous = next_period(previous, q, g)
+                assert tuple(previous) == peak_polynomial(v*m)
+                transitions += 1
+    return transitions
+
+
+def check_period_modes():
+    cases = 0
+    for v in [(2,), (1, 2, 1, 3), (3, 1, 2, 1), (3, 2, 4, 1, 3), (1, 3, 2, 3)]:
+        q, g, h = period_polynomials(v)
+        def derivative(p):
+            return sum(i*a for i, a in enumerate(p))
+        mass = sum(q)
+        mean = Fraction(derivative(q), mass)
+        variance = sum((i-mean)**2*a for i, a in enumerate(q))/mass
+        third = sum((i-mean)**3*a for i, a in enumerate(q))/mass
+        b0 = sum(h) + Fraction(sum(g), mass-1)
+        b1 = derivative(h) + Fraction(derivative(g), mass-1) - Fraction(sum(g)*derivative(q), (mass-1)**2)
+        ranks = h
+        for m in range(2, 101):
+            ranks = next_period(ranks, q, g)
+            if m in (60, 80, 100):
+                predicted = (m-1)*mean + b1/b0 - third/(2*variance)
+                closest = min(abs(i-predicted) for i in (predicted.__floor__(), predicted.__ceil__()))
+                mode_set = [i for i, value in enumerate(ranks) if value == max(ranks)]
+                assert all(abs(i-predicted) == closest for i in mode_set), (v, m, predicted, mode_set)
+                cases += 1
+    return cases
+
+
 def check():
     tested = inequalities = 0
     for n in range(11):
@@ -141,6 +197,7 @@ def check():
         assert ranks[(len(host)+sum(host)-1)//2] == max(ranks)
     print(f"Checked {tested} hosts, {inequalities} two-peak second differences, "
           f"and {check_strings()} tensor string decompositions.")
+    print(f"Checked {check_periods()} periodic transitions and {check_period_modes()} exact peak-location examples.")
 
 
 if __name__ == "__main__":

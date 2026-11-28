@@ -1,4 +1,5 @@
 import BoxProfiles
+import PeakPolynomial
 
 /-- info: 'LayeredRanks.greedy_succeeds_iff' depends on axioms: [propext, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
@@ -31,3 +32,23 @@ import BoxProfiles
 /-- info: 'LayeredRanks.rankCount_sharp_upper_tail' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms LayeredRanks.rankCount_sharp_upper_tail
+
+/-- info: 'LayeredRanks.rankPoly_coeff' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.rankPoly_coeff
+
+/-- info: 'LayeredRanks.limitedPoly_cons' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.limitedPoly_cons
+
+/-- info: 'LayeredRanks.rankPoly_peak' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.rankPoly_peak
+
+/-- info: 'LayeredRanks.periodic_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.periodic_recurrence
+
+/-- info: 'LayeredRanks.periodic_geometric_sum' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms LayeredRanks.periodic_geometric_sum
