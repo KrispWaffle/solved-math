@@ -12,6 +12,10 @@ Vatter’s final update credits Wenlin Zhang and Haobo Ma with a family whose li
 
 Searches for attainable derangement proportions, derangement-limit spectrum, fixed-point-free densities, rational and real limiting probabilities, and small permutation classes located results on a different logic of permutations and on the growth-rate spectrum. The reference catalogue’s main and research trees, issues and PR records, this repository’s branches and pinned Mathlib yielded no entry establishing this exact attainable-limit classification. The separately published solution for separable derangements concerns one class. The search is bounded, and a second search and independent review are required before promotion. [First-order limiting probabilities](https://arxiv.org/abs/2610.34328) · [Growth rates of permutation classes](https://arxiv.org/abs/0807.2815) · [Separable derangements](https://github.com/1337isnot1337/solved-conjectures/pull/443)
 
+## Polynomial-growth classes
+
+The even and odd derangement proportions each have a rational limit. A finite calculation decides whether they agree. Every rational in $[0,1]$ occurs in this family. Lean gives actual hereditary witnesses with exact counts for every rational. The fraction of fixed points also has a limit along all lengths, described by a finite mixture of beta distributions and point masses. [Classification and proof](POLYNOMIAL-CLASSES.md) · [Rational witnesses in Lean](../../lean/SolvedMath/DerangementRationals.lean)
+
 ## Construction and verification
 
 A skew sum of two typical long members of the chosen sum-closed class moves both blocks far enough to avoid fixed points. A finite suffix then determines the limiting proportion through its length-weighted count of derangements. Two finite truncations, combined into one hereditary suffix class, place the target between the ratios at the two ends of a growth-rate interval. Continuity gives the desired class. [Proof](PROOF.md)

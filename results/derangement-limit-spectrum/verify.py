@@ -3,6 +3,8 @@
 from fractions import Fraction
 from itertools import permutations
 
+from verify_polynomial import check_polynomial
+
 
 def direct(left, right):
     return left + tuple(len(left) + x for x in right)
@@ -151,3 +153,5 @@ if __name__ == "__main__":
     print(f"Derangement spectrum: {pairs} permutation pairs, "
           f"{members} distinct decorated members at length 12, "
           f"{unique} uniquely recovered direct-sum pairs across lengths.")
+    boxes, rational_slices = check_polynomial()
+    print(f"Polynomial classes: {boxes} exact monotone inflations and {rational_slices} rational-witness slices.")

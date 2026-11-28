@@ -169,3 +169,23 @@ open SolvedMath.PatternSeparator
 /-- info: 'DerangementSpectrum.attained_values_of_finite_decorations' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms DerangementSpectrum.attained_values_of_finite_decorations
+
+/-- info: 'DerangementSpectrum.increasing_block_count' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.increasing_block_count
+
+/-- info: 'DerangementSpectrum.decreasing_block_equation' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.decreasing_block_equation
+
+/-- info: 'DerangementSpectrum.decreasing_block_count' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.decreasing_block_count
+
+/-- info: 'DerangementSpectrum.fractionClass_counts' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.fractionClass_counts
+
+/-- info: 'DerangementSpectrum.rational_attained' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.rational_attained
