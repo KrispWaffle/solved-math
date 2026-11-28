@@ -189,3 +189,35 @@ open SolvedMath.PatternSeparator
 /-- info: 'DerangementSpectrum.rational_attained' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms DerangementSpectrum.rational_attained
+
+/-- info: 'DerangementSpectrum.exists_active_cell' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.exists_active_cell
+
+/-- info: 'DerangementSpectrum.cellShift_slice_injective' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.cellShift_slice_injective
+
+/-- info: 'DerangementSpectrum.cellShift_slab_card' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.cellShift_slab_card
+
+/-- info: 'DerangementSpectrum.geometric_digit_interval' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.geometric_digit_interval
+
+/-- info: 'DerangementSpectrum.fill_tail_weight' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.fill_tail_weight
+
+/-- info: 'DerangementSpectrum.prescribe_mixture' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.prescribe_mixture
+
+/-- info: 'DerangementSpectrum.ratio_limit_of_scaled_counts' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.ratio_limit_of_scaled_counts
+
+/-- info: 'DerangementSpectrum.fixed_growth_spectrum_of_labelled_classes' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DerangementSpectrum.fixed_growth_spectrum_of_labelled_classes

@@ -16,6 +16,10 @@ Searches for attainable derangement proportions, derangement-limit spectrum, fix
 
 The even and odd derangement proportions each have a rational limit. A finite calculation decides whether they agree. Every rational in $[0,1]$ occurs in this family. Lean gives actual hereditary witnesses with exact counts for every rational. The fraction of fixed points also has a limit along all lengths, described by a finite mixture of beta distributions and point masses. [Classification and proof](POLYNOMIAL-CLASSES.md) · [Rational witnesses in Lean](../../lean/SolvedMath/DerangementRationals.lean)
 
+## Prescribing the growth rate
+
+For any growth rate at least Bevan's constant (about 2.357), every limiting derangement proportion in $[0,1]$ occurs at that exact rate. The construction also gives sum-closed classes at every rate on the upper ray of Vatter's Conjecture 10.1. The interval between the two known growth thresholds remains open for that conjecture. [Proof and scope](PRESCRIBED-GROWTH.md) · [Lean displacement and series lemmas](../../lean/SolvedMath/DerangementGrowth.lean)
+
 ## Construction and verification
 
 A skew sum of two typical long members of the chosen sum-closed class moves both blocks far enough to avoid fixed points. A finite suffix then determines the limiting proportion through its length-weighted count of derangements. Two finite truncations, combined into one hereditary suffix class, place the target between the ratios at the two ends of a growth-rate interval. Continuity gives the desired class. [Proof](PROOF.md)

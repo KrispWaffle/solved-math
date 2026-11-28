@@ -4,4 +4,4 @@ import SolvedMath.ClusterFigure
 import SolvedMath.TableauRecurrence
 import SolvedMath.StripCoordinates
 import SolvedMath.RandomPatternDisplacements
-import SolvedMath.DerangementRationals
+import SolvedMath.DerangementGrowth

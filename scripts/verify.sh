@@ -18,7 +18,9 @@ cd "$(dirname "$0")/.."
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/BooleanAlgebra.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Combinatorics/Derangements/Basic.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Circular/ZMod.olean ||
-        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Interval/Finset/Fin.olean ]]; then
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Interval/Finset/Fin.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/SpecificLimits/Normed.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Ring.olean ]]; then
     lake exe cache get Mathlib.Analysis.SpecialFunctions.Pow.Real Mathlib.Data.Fintype.Card \
       Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic Mathlib.Logic.Equiv.Fin.Basic \
       Mathlib.MeasureTheory.Integral.Prod Mathlib.MeasureTheory.Integral.Pi \
@@ -35,7 +37,8 @@ cd "$(dirname "$0")/.."
       Mathlib.Analysis.SpecialFunctions.Exponential Mathlib.Logic.Equiv.Set \
       Mathlib.Data.Finset.BooleanAlgebra Mathlib.Tactic.FinCases Mathlib.Data.Fin.VecNotation \
       Mathlib.Combinatorics.Derangements.Basic Mathlib.Order.Circular.ZMod Mathlib.Analysis.SpecificLimits.Basic \
-      Mathlib.Order.Interval.Finset.Fin Mathlib.Data.Fin.Rev
+      Mathlib.Order.Interval.Finset.Fin Mathlib.Data.Fin.Rev \
+      Mathlib.Analysis.SpecificLimits.Normed Mathlib.Algebra.Order.Floor.Ring
   fi
   lake build
   lake env leanchecker --fresh --verbose SolvedMath

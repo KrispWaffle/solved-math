@@ -2,6 +2,8 @@
 
 ## November 28, 2026
 
+- Proved that the growth rate and limiting derangement proportion can be prescribed independently on Bevan’s entire upper ray. The proof constructs a sum-closed class at every growth rate on the ray, settling that range of Vatter’s Conjecture 10.1. [Joint result](results/derangement-limit-spectrum/PRESCRIBED-GROWTH.md) · [Lean scope](docs/lean-status.md)
+
 - Classified derangement limits for polynomial-growth classes in the existing derangement package. Both parity subsequences have rational limits. The normalized fixed-point count has an explicit mixture of beta laws and endpoint masses. Lean proves every rational witness with its exact eventual counts. [Proof and prior special cases](results/derangement-limit-spectrum/POLYNOMIAL-CLASSES.md)
 
 - Determined all attainable limiting derangement proportions in hereditary permutation classes. Every real number in the unit interval occurs, even with the growth rate restricted to $[5/2,13/5]$. The complete proof was independently reviewed. Lean verifies the endpoint classes, direct and skew sums, and interpolation from two explicit estimates. [Result](results/derangement-limit-spectrum/README.md) · [Audit](results/derangement-limit-spectrum/AUDIT.md)

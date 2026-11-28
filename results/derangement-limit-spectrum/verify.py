@@ -4,6 +4,7 @@ from fractions import Fraction
 from itertools import permutations
 
 from verify_polynomial import check_polynomial
+from verify_growth import check_growth
 
 
 def direct(left, right):
@@ -155,3 +156,6 @@ if __name__ == "__main__":
           f"{unique} uniquely recovered direct-sum pairs across lengths.")
     boxes, rational_slices = check_polynomial()
     print(f"Polynomial classes: {boxes} exact monotone inflations and {rational_slices} rational-witness slices.")
+    tags, patterns, cells, fibres = check_growth()
+    print(f"Prescribed growth: {tags} antichain tags, {patterns} distinct tag subpatterns across the checked levels, "
+          f"{cells} active cells and {fibres} fixed-total displacement fibres.")
