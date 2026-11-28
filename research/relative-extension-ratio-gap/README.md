@@ -1,0 +1,19 @@
+# How close a relative linear-extension ratio can come to one
+
+## Target
+
+For a finite poset $P$ and any $x\in P$, let $e(P)$ count its linear extensions and let $\rho(P,x)=e(P)/e(P-x)$. Chan and Pak define $\nu(c,d)$ as the minimum size of a poset realizing $d/c$. After Theorem 1.8 they ask whether their upper bound $d/c+O(\log d\log\log d)$ remains valid when the restriction $d\ge3c$ is dropped entirely. The unrestricted question allows any distinguished element and any common multiple of the two extension counts. [Chan and Pak, §1, (1.5)–(1.7), arXiv v2](https://arxiv.org/pdf/2401.09723v2) · [Published paper](https://doi.org/10.1016/j.ejc.2024.104018)
+
+Ghodsi proves the upper bound for $d\ge(1+\varepsilon)c$ for every fixed positive $\varepsilon$. His Proposition 1.3 gives an obstruction for his continued-fraction construction when the ratio tends to one. His §7 leaves open whether a different construction can cover this range. A size lower bound applying to every poset, attained along a sequence with $d/c\to1$, would answer the unrestricted question. Kravitz and Sah's conjecture about prescribing a single extension count and the sharper logarithmic error within the original range are separate targets. [Ghodsi, Theorem 1.2, Proposition 1.3 and §7](https://arxiv.org/html/2607.10084v1) · [Kravitz and Sah](https://arxiv.org/abs/1906.06036)
+
+## Opening search, 28 November 2026
+
+I searched for the two papers, their titles, equation and theorem numbers, the deletion ratio, the least nonunit ratio, the fraction $(c+1)/c$, and lower bounds involving comparable and incomparable elements. I checked the research and publication catalogues, repository issue searches, Mathlib's order-extension sources, and the citing record of Ghodsi's paper. OpenAlex listed zero citing works at this check. The closest prior bounds I found are $\nu(c,d)\ge d/c$ in Chan and Pak and the construction-specific obstruction in Ghodsi. Chan, Pak and Panova use a related operation of moving an incomparable element in a listing to compare the numbers of extensions at adjacent ranks. Their rank counts concern a fixed poset with one specified rank, while the present question compares a poset and its induced deletion. [Chan and Pak](https://arxiv.org/pdf/2401.09723v2) · [Ghodsi](https://arxiv.org/abs/2607.10084) · [OpenAlex record](https://api.openalex.org/works/W7167846539) · [Adjacent-rank comparison, §5.2](https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/on-the-crossproduct-conjecture-for-the-number-of-linear-extensions/044B8106B0B02D7C13219FA9AE438EDF)
+
+## Prior-result finding, 28 November 2026
+
+An independent review identified the 1989 antichain inequality of Edelman, Hibi and Stanley and of Stachowiak. For any antichain $A$ it gives $e(P)\ge\sum_{a\in A}e(P-a)$. Together with the elementary $e(P)\le n e(P-y)$, it settles the unrestricted question. [Antichain inequality and single deletion bound, Theorem 3.7 and Corollary 3.9](https://arxiv.org/pdf/2311.02743) · [Edelman, Hibi and Stanley](https://doi.org/10.1007/BF00341632)
+
+If $x$ compares to every element, its insertion slot is unique and its ratio equals one. Otherwise choose $y$ incomparable to $x$ and apply the inequality to $\{x,y\}$. It gives $e(P-x)\le e(P)-e(P-y)\le(1-1/n)e(P)$. Thus ratio $(c+1)/c$ requires at least $c+1$ elements. A $c$-element chain disjoint from a singleton attains the bound when a chain member is distinguished. Consequently $\nu(c,c+1)=c+1$, which excludes a uniform polylogarithmic error as the ratio tends to one.
+
+This implication is credited to the prior inequalities. The target is closed as a discovery candidate and excluded from the catalogue. We retain the direct injection and the two alternative arguments in the research notes. Their stronger inequality uses the number of elements comparable to $x$. [Additional arguments](PROOF.md)
