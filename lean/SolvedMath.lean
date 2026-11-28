@@ -12,3 +12,4 @@ import SolvedMath.ResidualBase
 import SolvedMath.RandomInversionProbability
 import SolvedMath.StarForestPacking
 import SolvedMath.InducedIsomorphismStatement
+import SolvedMath.FoldedMinimalHardness

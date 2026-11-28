@@ -25,6 +25,8 @@ cd "$(dirname "$0")/.."
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Sublists.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Finite.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Combinatorics/SimpleGraph/Maps.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Instances/AddCircle/DenseSubgroup.olean ||
+        ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/Real/Cardinality.olean ||
         ! -f .lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/TuringMachine/PostTuringMachine.olean ]]; then
     lake exe cache get Mathlib.Analysis.SpecialFunctions.Pow.Real Mathlib.Data.Fintype.Card \
       Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic Mathlib.Logic.Equiv.Fin.Basic \
@@ -46,6 +48,7 @@ cd "$(dirname "$0")/.."
       Mathlib.Analysis.SpecificLimits.Normed Mathlib.Algebra.Order.Floor.Ring \
       Mathlib.Data.List.Permutation Mathlib.Data.List.Sublists Mathlib.SetTheory.Cardinal.Finite \
       Mathlib.Combinatorics.SimpleGraph.Maps Mathlib.Computability.TuringMachine.PostTuringMachine \
+      Mathlib.Topology.Instances.AddCircle.DenseSubgroup Mathlib.Analysis.Real.Cardinality \
       Mathlib.Data.Fintype.BigOperators Mathlib.Algebra.Order.BigOperators.Group.Finset
   fi
   lake build

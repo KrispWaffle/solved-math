@@ -433,3 +433,43 @@ open SolvedMath.PatternSeparator
 /-- info: 'BipartiteInducedIsomorphism.path_form_false' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms BipartiteInducedIsomorphism.path_form_false
+
+/-- info: 'FoldedLinearForests.mechanical_almostPeriodic' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.mechanical_almostPeriodic
+
+/-- info: 'FoldedLinearForests.block_discrepancy' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.block_discrepancy
+
+/-- info: 'FoldedLinearForests.degree_recovers_letters' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.degree_recovers_letters
+
+/-- info: 'FoldedLinearForests.two_representations' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.two_representations
+
+/-- info: 'FoldedLinearForests.image_of_consecutive' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.image_of_consecutive
+
+/-- info: 'FoldedLinearForests.slope_eq_of_subclass' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.slope_eq_of_subclass
+
+/-- info: 'FoldedLinearForests.minimal_eq_hostHull' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.minimal_eq_hostHull
+
+/-- info: 'FoldedLinearForests.countable_minimal_hard' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.countable_minimal_hard
+
+/-- info: 'FoldedLinearForests.exists_counterexample_slope' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.exists_counterexample_slope
+
+/-- info: 'FoldedLinearForests.journal_conjecture_three_false' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms FoldedLinearForests.journal_conjecture_three_false

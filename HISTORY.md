@@ -2,6 +2,7 @@
 
 ## November 28, 2026
 
+- Disproved the journal conjecture on minimal hardness for folded linear forests in Lean. A separate reviewed construction gives a computable counterexample and polynomial-time solvability on every proper hereditary subclass. [Proof](results/folded-linear-forests/PROOF.md) · [Lean theorem](lean/SolvedMath/FoldedMinimalHardness.lean)
 - Disproved Alecu, Lozin and Malyshev’s proposed classification for induced subgraph isomorphism. The new reduction gives NP-completeness whenever the forbidden path has six or more vertices, completing the dichotomy with their positive result. [Proof](results/bipartite-induced-isomorphism/PROOF.md) · [Review](results/bipartite-induced-isomorphism/AUDIT.md)
 
 - Determined the probability of every fixed connectivity gap and the conditional minimum-degree limit for uniform random permutation graphs. [Written proof](results/random-inversion-connectivity/GAPS.md)
