@@ -117,3 +117,19 @@ open SolvedMath.PatternSeparator
 /-- info: 'DistinctPermutationPatterns.source_limit_from_embedding_estimates' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms DistinctPermutationPatterns.source_limit_from_embedding_estimates
+
+/-- info: 'DistinctPermutationPatterns.mean_displacement_tendsto_two' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.mean_displacement_tendsto_two
+
+/-- info: 'DistinctPermutationPatterns.prescribed_assignment_count' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.prescribed_assignment_count
+
+/-- info: 'DistinctPermutationPatterns.displacementCount_eq_plot' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.displacementCount_eq_plot
+
+/-- info: 'DistinctPermutationPatterns.mean_displacementCount' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms DistinctPermutationPatterns.mean_displacementCount

@@ -7,7 +7,7 @@ Mathematical conjectures with written proofs and reproducible checks. Each resul
 | Result | Conclusion | Verification |
 |---|---|---|
 | [Lee–Sah cluster-poset heights](results/lee-sah-cluster-height/README.md) | All marked ranks in a uniform extension concentrate simultaneously on the inverse beta curve. | Full Lean proof, independent mathematical review, exact rank checks |
-| [Distinct patterns in a random permutation](results/distinct-random-permutation-patterns/README.md) | The expected fraction tends to $e^{-2}$, and the normalized count has an explicit nonconstant limiting law. | Reviewed written proof, partial Lean verification, exact enumeration |
+| [Distinct patterns in a random permutation](results/distinct-random-permutation-patterns/README.md) | The expected fraction tends to $e^{-2}$. One random curve gives the joint limiting law across all nonempty pattern lengths. | Reviewed written proof, partial Lean verification, exact enumeration |
 | [Set-valued tableaux on periodic shifted diagrams](results/periodic-set-valued-tableaux/README.md) | A finite transfer counts every excess. For each fixed excess, one recurrence works for all outlines at a given width. | Lean proof of the recurrence and coordinate obstruction, reviewed written asymptotics |
 | [Separators in permutation-pattern posets](results/pattern-poset-separator/README.md) | For every compatible overlap, boundary ranks decide separator existence at any occurrence count. Existence stabilizes by $4K+1$ windows for pattern length $K$. The proposed overlap-two family also has an explicit separator. | Lean 4, kernel replay, direct enumeration |
 
